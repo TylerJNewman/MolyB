@@ -1,5 +1,5 @@
 # Molyb
-<<<<<<< HEAD
+
 
 [Heroku link][heroku]
 
