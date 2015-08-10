@@ -23,13 +23,14 @@ default: &default
 
 development:
   <<: *default
-  database: molyb-dev
+  database: Molyb_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: sample-project-proposal-master_1
+
+  #username: Molyb
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +58,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: molyb-test
+
+  database: Molyb_test
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +83,7 @@ test:
 #
 production:
   <<: *default
-  database: molyb-prod
-  username: sample-project-proposal-master_1
-  password: <%= ENV['SAMPLE-PROJECT-PROPOSAL-MASTER_1_DATABASE_PASSWORD'] %>
+  database: Molyb_production
+  username: Molyb
+  password: <%= ENV['MOLYB_DATABASE_PASSWORD'] %>
+
