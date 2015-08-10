@@ -1,8 +1,8 @@
-# Flux-capacitr
+# Molyb
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: http://molyb.herokuapp.com
 
 ## Minimum Viable Product
 Molyb is a clone of Evernote built on Rails and Backbone. Users can:
