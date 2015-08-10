@@ -39,12 +39,13 @@ Notebooks. Tags.  Build Notes.  Add css highlighting on hover.
 
 [Details][phase-two]
 
-Create edit view pane.  Create feature where it saves the note once you exit.
+### Phase 3: Create edit view pane.  Create feature where it saves the note once you exit.
 Add tag button.  Trash button.  Created. Modified... Share button.
 Edit features.  Allow upload of images...  Allow lists to be made...
 
 [Details][phase-three]
 
-Finish up features.  Add pretty CSS transitions.  Create a chat feature and/or
+### Phase 4: Finish up features.  Add pretty CSS transitions.  Create a chat feature and/or
 feature to share with others....  TODO lists widget...
 
+[Details][phase-four]
