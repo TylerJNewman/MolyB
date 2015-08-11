@@ -12,11 +12,21 @@ gem 'newrelic_rpm'
 gem 'rails_12factor'
 gem 'backbone-on-rails', '~> 1.1.0.0'
 gem 'underscore-rails'
+gem 'bootstrap-sass'
+gem 'jasny-bootstrap-rails', '~> 3.1.3'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google'
+gem 'uuidtools'
+gem 'letter_opener', '~> 1.4.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'better_errors'
+  gem 'binding_of_caller'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

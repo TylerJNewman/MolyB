@@ -4,8 +4,7 @@ window.Molyb = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
-    window.App = window.ScratchPad();
+    window.App = window.Molyb();
   }
 };
 
