@@ -10,12 +10,11 @@
 </head>
 <body>
 
-<%= render 'layouts/header' %>
-
-<div class="container">
-
-  <% flash.each do |name, msg| %>
-    <%= content_tag(:div, msg, class: "alert alert-info") unless (msg == "Signed in successfully.") %>
+<div class="container" id="content">
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-danger") %>
+    <% end %>
   <% end %>
 
   <%= yield %>
