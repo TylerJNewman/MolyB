@@ -9,8 +9,6 @@ window.Molyb = {
       notes: Molyb.Collections.notes
     });
     var $navbar = $('#navbar');
-    var $noteShowEl = $('.note-show');
-    var $notesListEl = $('.notes-list');
 
     var navBarView = new Molyb.Views.NavBar();
     $navbar.prepend(navBarView.render().$el);

@@ -53,9 +53,14 @@ body {
   color: rgb(242, 105, 100);
 }
 
-// .navbar {
-//   background: rgba(255, 212, 100, 1);
-// }
+#navbar {
+  height: 50px;
+}
+
+.navbar {
+  background: rgba(255, 212, 100, 1);
+  height: 100%;
+}
 
 .container .navbar .container {
   width: auto;

@@ -9,10 +9,9 @@
 </head>
 <body>
   <script>
-    <% if user_signed_in? %>
-      window.username = "<%= current_user.email %>"
-    <% end %>
+  window.current_user = "<%= current_user %>"
   </script>
+  <div class="container">
 
     <% if flash[:errors] %>
       <% flash[:errors].each do |name, msg| %>
@@ -22,7 +21,7 @@
 
     <%= yield %>
 
-  </div><!-- /.container -->
+  </div>
 
 </body>
 </html>

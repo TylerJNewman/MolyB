@@ -1,4 +1,4 @@
-Molyb.Models.Notes = Backbone.Model.extend({
+Molyb.Models.Note = Backbone.Model.extend({
 
   urlRoot: '/api/notes',
 
