@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+
+
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "jasny-bootstrap";
+ @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+html, body {
+ height: 100%;
+}
+
+body {
+ padding: 0px 0 0 0;
+ color: 6C7A89;
+ $font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.jumbotron h1 {
+  color: rgb(18, 83, 164);
+}
+
+.jumbotron, .container-fluid .jumbotron {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin: 4% 3%;
+}
+
+.glyphicon-fire:before {
+  color: rgb(242, 105, 100);
+}
+
+// .navbar {
+//   background: rgba(255, 212, 100, 1);
+// }
+
+.container .navbar .container {
+  width: auto;
+}
+
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+}
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 0px) {
+ body {
+   padding: 0;
+ }
+
+.navbar{
+   right: auto;
+   background-color: rgba(255, 212, 100, 1);
+   border: none;
+ }
+}
+
+// .alert {
+//   position: absolute;
+// }

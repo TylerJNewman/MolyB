@@ -1,0 +1,9 @@
+<ul id="notes-index">
+  <% notes.each(function (note) { %>
+    <li>
+      <a href="#/notes/<%= note.id %>"><%= note.escape("title") %></a>
+    </li>
+  <% }) %>
+</ul>
+
+<!-- <a href="#/notes/new">New Link</a> -->

@@ -4,8 +4,13 @@ window.Molyb = {
   Views: {},
   Routers: {},
   initialize: function() {
-    window.App = window.Molyb();
+    new Molyb.Routers.Router({
+      $rootEl: $("#content"),
+      notes: Molyb.Collections.notes
+    });
+    Backbone.history.start();
   }
+
 };
 
 $(document).ready(function(){
