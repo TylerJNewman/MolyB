@@ -5,16 +5,15 @@ window.Molyb = {
   Routers: {},
   initialize: function() {
     new Molyb.Routers.Router({
-      $rootEl: $("#content"),
+      $rootEl: $(".content"),
       notes: Molyb.Collections.notes
     });
-    var $content = $('.content');
+    var $navbar = $('#navbar');
     var $noteShowEl = $('.note-show');
     var $notesListEl = $('.notes-list');
 
     var navBarView = new Molyb.Views.NavBar();
-    $content.prepend(navBarView.render().$el);
-    debugger;
+    $navbar.prepend(navBarView.render().$el);
     Backbone.history.start();
   }
 

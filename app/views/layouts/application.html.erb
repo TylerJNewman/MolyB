@@ -8,8 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <div class="container" id="content">
+  <script>
+    <% if user_signed_in? %>
+      window.username = "<%= current_user.email %>"
+    <% end %>
+  </script>
 
     <% if flash[:errors] %>
       <% flash[:errors].each do |name, msg| %>
