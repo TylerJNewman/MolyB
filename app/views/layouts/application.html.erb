@@ -10,16 +10,17 @@
 </head>
 <body>
 
-<div class="container" id="content">
-  <% if flash[:errors] %>
-    <% flash[:errors].each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-danger") %>
+  <div class="container" id="content">
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-danger") %>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <%= yield %>
+    <%= yield %>
 
-</div><!-- /.container -->
+  </div><!-- /.container -->
 
 </body>
 </html>
