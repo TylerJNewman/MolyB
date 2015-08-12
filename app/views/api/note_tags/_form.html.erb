@@ -1,0 +1,17 @@
+<%= form_for(@api_note_tag) do |f| %>
+  <% if @api_note_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@api_note_tag.errors.count, "error") %> prohibited this api_note_tag from being saved:</h2>
+
+      <ul>
+      <% @api_note_tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,23 +1,22 @@
-BetterNote.Views.NavBar = Backbone.View.extend({
+Molyb.Views.NavBar = Backbone.View.extend({
   tagName: "header",
 
   className: "navbar",
 
-  template: JST['static_pages/navbar'],
+  template: JST["static_pages/navbar"],
 
   events: {
     "click .nav-right-item": "showDropdown",
   },
 
-
-  showDropdown: function(event) {
-    event.preventDefault();
-
-    var $dropdown = $(event.currentTarget).find(".options-dropdown");
+  showDropdown: function(e) {
+    e.preventDefault();
+    $target = $(e.currentTarget);
+    var $dropdown = $target.find(".options-dropdown");
     $dropdown.removeClass("hidden");
   },
 
-  hideDropdowns: function(event) {
+  hideDropdown: function(e) {
     $(".options-dropdown").not("hidden").addClass("hidden");
   },
 

@@ -1,7 +1,7 @@
 Molyb.Collections.Notes = Backbone.Collection.extend({
   url: "/api/notes",
 
-  model: Reddit.Models.Note,
+  model: Molyb.Models.Note,
 
   getOrFetch: function (id) {
       var notes = this.get(id);

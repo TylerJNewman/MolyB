@@ -8,8 +8,16 @@ window.Molyb = {
       $rootEl: $("#content"),
       notes: Molyb.Collections.notes
     });
+    var $content = $('.content');
+    var $noteShowEl = $('.note-show');
+    var $notesListEl = $('.notes-list');
+
+    var navBarView = new Molyb.Views.NavBar();
+    $content.prepend(navBarView.render().$el);
+    debugger;
     Backbone.history.start();
   }
+
 
 };
 
