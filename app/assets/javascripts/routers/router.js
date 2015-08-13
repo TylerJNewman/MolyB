@@ -14,16 +14,20 @@ Molyb.Routers.Router = Backbone.Router.extend({
   },
 
   notesIndex: function () {
+    debugger;
+    alert("You requested the index page");
     this.notes.fetch();
     var indexView = new Molyb.Views.NotesIndex({collection: this.notes});
     this._swapMid(indexView);
   },
 
-  // showNote: function (id) {
-  //   var model = this.notes.getOrFetch(id);
-  //   var showNoteView = new Molyb.Views.NoteShow({model: model});
-  //   this._swapView(showNoteView);
-  // },
+
+  showNote: function (id) {
+    alert("You requested the note with the id of " + id);
+    var model = this.notes.getOrFetch(id);
+    var showNoteView = new Molyb.Views.NoteShow({model: model});
+    this._swapView(showNoteView);
+  },
 
   // showNotebook: function (id) {
   //   var model = this.notes.getOrFetch(id);

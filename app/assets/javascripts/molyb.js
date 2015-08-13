@@ -12,7 +12,7 @@ window.Molyb = {
 
     var navBarView = new Molyb.Views.NavBar();
     $navbar.prepend(navBarView.render().$el);
-    Backbone.history.start();
+    Backbone.history.start({pushState: true});
   }
 
 
