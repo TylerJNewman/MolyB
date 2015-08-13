@@ -9,7 +9,7 @@
 </head>
 <body>
   <script>
-  window.current_user = "<%= current_user %>"
+  window.current_user = "<%= current_user %>";
   </script>
   <div class="container">
 
@@ -30,7 +30,7 @@
 
     <%= yield %>
 
-  <%= render 'pages/_jumbotron' unless user_signed_in? %>
+
 
   </div>
 
