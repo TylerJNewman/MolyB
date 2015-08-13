@@ -6,8 +6,10 @@ Molyb.Views.NotesIndex = Backbone.View.extend({
   },
 
   render: function () {
-    // this.$el.html(this.template({notes: this.collection}));
-    this.$el.html("hello there");
+    console.log(this.collection);
+
+    this.$el.html(this.template({notes: this.collection}));
+
     return this;
   }
 });
