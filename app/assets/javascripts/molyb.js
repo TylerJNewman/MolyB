@@ -4,6 +4,11 @@ window.Molyb = {
   Views: {},
   Routers: {},
   initialize: function() {
+    window.Molyb.AllNotes = [
+      {title: 'My first note', body: 'Yay!', owner_id: 1, notebook_id: 1},
+      {title: 'My second note', body: '', owner_id: 1, notebook_id: 1},
+      {title: 'My third note', body: 'Keep Going!', owner_id: 1, notebook_id: 1}
+    ];
     new Molyb.Routers.Router({
       $rootEl: $(".content"),
       notes: Molyb.Collections.notes

@@ -14,10 +14,8 @@ Molyb.Routers.Router = Backbone.Router.extend({
   },
 
   notesIndex: function () {
-    debugger;
-    alert("You requested the index page");
-    this.notes.fetch();
-    var indexView = new Molyb.Views.NotesIndex({collection: this.notes});
+    // this.notes.fetch();
+    var indexView = new Molyb.Views.NotesIndex({collection: Molyb.AllNotes});
     this._swapMid(indexView);
   },
 
