@@ -8,21 +8,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <script>
-  window.current_user = "<%= current_user %>";
-  window.email = "<%= current_user.email %>" || null;
+  <% if user_signed_in? %>
 
-  </script>
+    <script>
+    window.current_user = "<%= current_user %>";
+    window.email = "<%= current_user.email %>" ;
+    </script>
+
+  <% end %>
+
   <div class="container">
 
-    <% unless user_signed_in? %>
-
       <div id="navbar"></div>
+   <!--  <% unless user_signed_in? %>
+
       <div class="jumbotron">
         <h1><span class="glyphicon glyphicon-fire">Molyb</h1>
       </div>
 
-    <% end %>
+    <% end %> -->
 
     <% if flash[:errors] %>
       <% flash[:errors].each do |name, msg| %>
