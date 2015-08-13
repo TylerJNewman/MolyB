@@ -10,12 +10,12 @@
 <body>
   <script>
   window.current_user = "<%= current_user %>";
-  window.email = "<%= current_user.email %>";
+  window.email = "<%= current_user.email %>" || null;
 
   </script>
   <div class="container">
 
-    <% if current_user %>
+    <% unless user_signed_in? %>
 
       <div id="navbar"></div>
       <div class="jumbotron">
