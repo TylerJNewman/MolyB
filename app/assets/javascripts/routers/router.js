@@ -9,22 +9,22 @@ Molyb.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "notesIndex",
-    "notes/:id": "showNote",
-    'notebooks/:id': 'showNotebook',
+    "api/notes/:id": "showNote",
+    'api/notebooks/:id': 'showNotebook',
   },
 
   notesIndex: function () {
-    // this.notes.fetch();
+    this.notes.fetch();
     var indexView = new Molyb.Views.NotesIndex({collection: this.notes});
     this._swapMid(indexView);
   },
 
 
   showNote: function (id) {
-    alert("You requested the note with the id of " + id);
+    console.log("You requested the note with the id of " + id);
     var model = this.notes.getOrFetch(id);
     var showNoteView = new Molyb.Views.NoteShow({model: model});
-    this._swapView(showNoteView);
+    this._swapMid(showNoteView);
   },
 
   // showNotebook: function (id) {
