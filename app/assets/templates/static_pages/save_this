@@ -3,7 +3,7 @@
     <!-- <a class="navmenu-brand" href="#">Sign In</a> -->
     <ul class="nav navmenu-nav">
         <li><%= link_to "Log in", new_user_session_path, class: "" %></li>
-        <li><%= link_to "Sign up", new_user_registration_path, class: "" %></li>
+        <li><%= link_to "Sign up", new_user_path, class: "" %></li>
         <!-- <li class="active"><a href="./">Create Account</a></li> -->
     </ul>
   </div>
