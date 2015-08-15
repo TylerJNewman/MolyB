@@ -10,8 +10,7 @@
 <body>
   <% if user_signed_in? %>
     <script>
-    window.current_user = "<%= current_user %>";
-    window.name = "<%= current_user.name %>";
+      window.username = "<%= current_user.name %>";
     </script>
   <% end %>
 
