@@ -9,13 +9,10 @@
 </head>
 <body>
   <% if user_signed_in? %>
-
     <script>
     window.current_user = "<%= current_user %>";
-    window.name = "<%= current_user.name %>" ;
-    window.hello = "hello"
+    window.name = "<%= current_user.name %>";
     </script>
-
   <% end %>
 
   <div class="container">
@@ -28,12 +25,6 @@
       </div>
 
     <% end %> -->
-
-    <% if flash[:errors] %>
-      <% flash[:errors].each do |name, msg| %>
-        <%= content_tag(:div, msg, class: "alert alert-danger") %>
-      <% end %>
-    <% end %>
 
     <%= yield %>
 
