@@ -1,25 +1,5 @@
 <ul id="notes-index">
-  <% notes.each(function (note) { %>
-    <li>
-      <dl>
-        <dt>Title</dt>
-        <dd>
-          <a href="api/notes/<%= note.escape("id") %>">
 
-            <%= note.escape("title") %>
-          </a>
-        </dd>
-        <dt>Content</dt>
-        <dd><%= note.escape("body")%></dd>
-        <dd>
-          Created: <%= moment(note.get("created_at")).fromNow() %>
-        </dd>
-        <dd>
-          Modified: <%= moment(note.get("updated_at")).fromNow() %>
-        </dd>
-      </dl>
-    </li>
-  <% }) %>
 </ul>
 
 

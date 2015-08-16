@@ -19,7 +19,6 @@ Molyb.Views.NoteShow = Backbone.View.extend({
     this.model.save({}, {
       success: function () {
         that.collection.add(that.model, { merge: true });
-        debugger;
         Backbone.history.navigate("", { trigger: true });
       }
     });

@@ -5,27 +5,19 @@ Molyb.Views.NotesIndex = Backbone.View.extend({
     this.listenTo(this.collection, "sync", this.render);
   },
 
-  events: {
-    "click a": "showNote"
-   // add blur save
-  },
-
-  showNote: function (e) {
-    e.preventDefault();
-    $target = $(e.currentTarget);
-    url = $target.attr("href");
-    // debugger;
-    Backbone.history.navigate(url, {trigger: true});
-  },
 
   render: function () {
     console.log(this.collection);
     this.collection.each(function (note){
       console.log(note);
     });
-
-    this.$el.html(this.template({notes: this.collection}));
-
+    this.$el.html(this.template());
+    this.collection.forEach(this.renderNote);
     return this;
+  },
+
+  renderNote: function (note) {
+     view = new Molyb.Views.NotesIndexItem({model: note, tagName: 'li'});
+     this.$('#notes-index').append(view.render().el)
   }
 });

@@ -1,0 +1,16 @@
+<dl>
+  <dt>Title</dt>
+  <dd>
+    <a href ="#" class="edit-note">
+      <%= note.escape("title") %>
+    </a>
+  </dd>
+  <dt>Content</dt>
+  <dd><%= note.escape("body")%></dd>
+  <dd>
+    Created: <%= moment(note.get("created_at")).fromNow() %>
+  </dd>
+  <dd>
+    Modified: <%= moment(note.get("updated_at")).fromNow() %>
+  </dd>
+</dl>
