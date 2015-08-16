@@ -40,7 +40,8 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= window.username %> <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/session" data-method="delete">Log Out</a></li>
-                <li><a href="/users/edit">Edit Account</a></li>
+                <li><a href="/users/<%= window.user_id %>/edit">Edit Account</a></li>
+
               </ul>
           </li>
         </ul>

@@ -17,12 +17,43 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+
+    current_password = params[:user][:current_password]
+
+    if params[:user][:password] == ""
+      params[:user][:password] = current_password
+    end
+
+    if !current_user.is_password?(current_password)
+      flash.now[:errors] = ["invalid password confirmation"]
+      render :edit
+    elsif @user.update(user_params)
+      redirect_to root_url
+    else
+      flash.now[:errors] = @user.errors.full_messages
+      render :edit
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def show
     @user = User.find(params[:id])
   end
 
   def index
     @users = User.all
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:success] = "User deleted"
+    redirect_to root_url
   end
 
   private
