@@ -1,2 +1,5 @@
-<h1><%= note.get('title') %></h1>
-<p><%= note.get('body') %></p>
+<input type="text" name="title" class="note-title" value="<%= note.escape('title') %>" />
+<br>
+<textarea class="note-content" name="body"><% note.escape('body') %></textarea>
+<br>
+<input type="submit">

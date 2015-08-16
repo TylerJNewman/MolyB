@@ -14,6 +14,8 @@
 //= require bootstrap-sprockets
 //= require jasny-bootstrap.min
 //= require jquery_ujs
+//= require jquery.serializeJSON
+//= require moment.js
 //= require underscore
 //= require backbone
 //= require molyb

@@ -1,19 +1,41 @@
 class Api::NotesController < ApplicationController
-  helper_method :notes, :note
 
-  def notes
-    @_notes ||= Note.all
-  end
-
-  def note
-    @_note ||= notes.find(params[:id])
+  def create
+    @note = current_user.notes.new(note_params)
+    if @note.save
+      render json: @note
+    else
+      render json: { error: "invalid entry" }, status: :unprocessable_entity
+    end
   end
 
   def index
-    render json: Note.all
+    @notes = current_user.notes.order({created_at: :asc})
+    render json: @notes
+  end
+
+  def update
+    @note = Note.find(params[:id])
+    if @note.update(note_params)
+      render json: @note
+    else
+      render json: { error: "invalid entry" }, status: :unprocessable_entity
+    end
   end
 
   def show
-    render json: notes.find(params[:id])
+    @note = Note.find(params[:id])
+    render json: @note
+  end
+
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+  end
+
+  private
+
+  def note_params
+    params.require(:note).permit(:title, :body, :notebook_id, :owner_id)
   end
 end

@@ -1,6 +1,10 @@
 Molyb.Views.NotesIndex = Backbone.View.extend({
   template: JST["notes/index"],
 
+  initialize: function () {
+    this.listenTo(this.collection, "sync", this.render);
+  },
+
   events: {
     "click a": "showNote"
    // add blur save
@@ -11,7 +15,7 @@ Molyb.Views.NotesIndex = Backbone.View.extend({
     $target = $(e.currentTarget);
     url = $target.attr("href");
     // debugger;
-    Backbone.history.navigate(url, {trigger: true})
+    Backbone.history.navigate(url, {trigger: true});
   },
 
   render: function () {

@@ -21,9 +21,9 @@ Molyb.Routers.Router = Backbone.Router.extend({
 
 
   showNote: function (id) {
-    console.log("You requested the note with the id of " + id);
+    console.log("requested note with id: " + id);
     var model = this.notes.getOrFetch(id);
-    var showNoteView = new Molyb.Views.NoteShow({model: model});
+    var showNoteView = new Molyb.Views.NoteShow({model: model, collection: this.notes});
     this._swapMid(showNoteView);
   },
 
