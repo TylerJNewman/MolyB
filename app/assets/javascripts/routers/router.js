@@ -19,12 +19,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
     this._swapMid(indexView);
   },
 
-  // $('.right-panel').each(function(i, elem) {
-  //   $(elem).wysihtml5();
-  // });
-  //
   editNote: function (id) {
-
     console.log("editing with id: " + id);
     var model = this.notes.getOrFetch(id);
     var editNoteView = new Molyb.Views.NoteEdit({model: model, collection: this.notes});
@@ -47,20 +42,20 @@ Molyb.Routers.Router = Backbone.Router.extend({
 
 
   _swapLeft: function (view) {
-    this._listView && this._listView.remove();
-    this._listView = view;
+    this._leftListView && this._leftListView.remove();
+    this._leftListView = view;
     this.$leftEl.html(view.render().$el);
   },
 
   _swapMid: function (view) {
-    this._listView && this._listView.remove();
-    this._listView = view;
+    this._midListView && this._midListView.remove();
+    this._midListView = view;
     this.$midEl.html(view.render().$el);
   },
 
   _swapRight: function (view) {
-    this._listView && this._listView.remove();
-    this._listView = view;
+    this._rightListView && this._rightListView.remove();
+    this._rightListView = view;
     this.$rightEl.html(view.render().$el);
   },
 

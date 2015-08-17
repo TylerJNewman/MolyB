@@ -1,6 +1,8 @@
 Molyb.Views.NotesIndex = Backbone.View.extend({
   template: JST["notes/index"],
 
+  className: "container",
+
   initialize: function () {
     this.listenTo(this.collection, "sync", this.render);
   },
@@ -18,6 +20,6 @@ Molyb.Views.NotesIndex = Backbone.View.extend({
 
   renderNote: function (note) {
      view = new Molyb.Views.NotesIndexItem({model: note, tagName: 'li'});
-     this.$('#notes-index').append(view.render().el)
+     this.$('#notes-index').append(view.render().el);
   }
 });

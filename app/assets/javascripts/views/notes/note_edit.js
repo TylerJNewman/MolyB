@@ -47,8 +47,4 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     this.editor();
     return this;
   },
-
-
-
-
 });
