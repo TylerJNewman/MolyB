@@ -109,6 +109,20 @@ ul
     list-style-type: none;
 }
 
-// .alert {
-//   position: absolute;
-// }
+
+
+.jumbotron
+{
+  display: block;
+  /* border, padding, and other styles go here,
+  don't set the height, and don't use floats or positioning */
+}
+
+.jumbotron textarea
+{
+  border: 0 none;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+  width: 100%;
+}
