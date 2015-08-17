@@ -1,0 +1,10 @@
+.right-panel {
+  position: absolute;
+  left: 582px;
+  top: 69px;
+  bottom: 0;
+  right: 0;
+  display: block;
+  overflow: auto;
+}
+

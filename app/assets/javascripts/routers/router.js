@@ -24,7 +24,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
     console.log("requested note with id: " + id);
     var model = this.notes.getOrFetch(id);
     var showNoteView = new Molyb.Views.NoteShow({model: model, collection: this.notes});
-    this._swapMid(showNoteView);
+    this._swapRight(showNoteView);
   },
 
   // showNotebook: function (id) {
@@ -43,13 +43,13 @@ Molyb.Routers.Router = Backbone.Router.extend({
   _swapMid: function (view) {
     this._listView && this._listView.remove();
     this._listView = view;
-    this.$leftEl.html(view.render().$el);
+    this.$midEl.html(view.render().$el);
   },
 
   _swapRight: function (view) {
     this._listView && this._listView.remove();
     this._listView = view;
-    this.$leftEl.html(view.render().$el);
+    this.$rightEl.html(view.render().$el);
   },
 
 });
