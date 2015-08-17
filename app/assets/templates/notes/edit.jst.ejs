@@ -1,5 +1,15 @@
-<div class="jumbotron col-sm-7" style="margin-top:0px">
-    <textarea class="note-editor panel panel-default" style="height: 300px;" placeholder="Enter text ...">
-    </textarea>
-
+<div class="container col-sm-7 text-editor" style="margin-top:0px" >
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <input type="text" name="title" class="note-title form-control input-normal" value="<%= note.escape('title') %>" />
+      </h3>
+    </div>
+    <div class="panel-body">
+      <textarea class="note-editor note-content panel panel-default" style="height: 300px;" name="body"><%= note.escape('body') %>
+      </textarea>
+    </div>
+  </div>
 </div>
+
+

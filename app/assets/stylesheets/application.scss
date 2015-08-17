@@ -111,18 +111,25 @@ ul
 
 
 
-.jumbotron
+.container.text-editor
 {
   display: block;
   /* border, padding, and other styles go here,
   don't set the height, and don't use floats or positioning */
 }
 
-.jumbotron textarea
+
+
+.container.text-editor textarea
 {
   border: 0 none;
   margin: 0;
   outline: 0 none;
   padding: 0;
+  width: 100%;
+}
+
+.container.text-editor iframe
+{
   width: 100%;
 }
