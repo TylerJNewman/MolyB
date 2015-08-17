@@ -17,7 +17,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     e.preventDefault();
     var title = this.$('.note-title').val();
     // var body = this.$('.note-content').val();
-    var body = this.$("textarea").contents().find("body").html();
+    var body = this.$("div.text-area").html();
     var that = this;
     this.model.set({title: title, body: body});
     this.model.save({}, {
