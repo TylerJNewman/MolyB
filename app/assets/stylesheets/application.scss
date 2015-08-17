@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-wysihtml5
 
 
  */
@@ -20,6 +21,8 @@
  @import "bootstrap";
  @import "jasny-bootstrap";
  @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+
 
  .devise-frame {
    position: relative;

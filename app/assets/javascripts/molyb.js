@@ -15,6 +15,10 @@ window.Molyb = {
       notes: notes
     });
 
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
     var $navbar = $('#navbar');
     var navBarView = new Molyb.Views.NavBar();
     $navbar.prepend(navBarView.render().$el);

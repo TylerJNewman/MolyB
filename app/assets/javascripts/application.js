@@ -13,6 +13,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jasny-bootstrap.min
+//= require bootstrap-wysihtml5
+//= require bootstrap-wysihtml5/locales
 //= require jquery_ujs
 //= require jquery.serializeJSON
 //= require moment.js

@@ -9,7 +9,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "notesIndex",
-    "api/notes/:id": "showNote",
+    "api/notes/:id": "editNote",
     'api/notebooks/:id': 'showNotebook',
   },
 
@@ -19,13 +19,25 @@ Molyb.Routers.Router = Backbone.Router.extend({
     this._swapMid(indexView);
   },
 
+  // $('.right-panel').each(function(i, elem) {
+  //   $(elem).wysihtml5();
+  // });
+  //
+  editNote: function (id) {
 
-  showNote: function (id) {
-    console.log("requested note with id: " + id);
+    console.log("editing with id: " + id);
     var model = this.notes.getOrFetch(id);
-    var showNoteView = new Molyb.Views.NoteShow({model: model, collection: this.notes});
-    this._swapRight(showNoteView);
+    var editNoteView = new Molyb.Views.NoteEdit({model: model, collection: this.notes});
+    this._swapRight(editNoteView);
   },
+
+
+  // showNote: function (id) {
+  //   console.log("requested note with id: " + id);
+  //   var model = this.notes.getOrFetch(id);
+  //   var showNoteView = new Molyb.Views.NoteShow({model: model, collection: this.notes});
+  //   this._swapRight(showNoteView);
+  // },
 
   // showNotebook: function (id) {
   //   var model = this.notes.getOrFetch(id);
