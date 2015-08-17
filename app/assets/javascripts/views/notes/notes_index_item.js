@@ -3,9 +3,9 @@ Molyb.Views.NotesIndexItem = Backbone.View.extend({
 
   tagName: "note",
 
-  // initialize: function () {
-  //   this.listenTo(this.model, "sync", this.render);
-  // },
+  initialize: function () {
+    this.listenTo(this.model, "sync", this.render);
+  },
 
   // events: {
   //   "submit": "submit"

@@ -4,7 +4,6 @@ window.Molyb = {
   Views: {},
   Routers: {},
   initialize: function() {
-
     var $navbar = $('#navbar');
     var navBarView = new Molyb.Views.NavBar();
     $navbar.prepend(navBarView.render().$el);
@@ -12,17 +11,20 @@ window.Molyb = {
     notes = new Molyb.Collections.Notes();
     notes.fetch();
 
-    // var $midPanel = $('.mid-panel');
-    // var indexView = new Molyb.Views.NotesIndex({collection: notes});
-    // $midPanel.html(indexView.render().$el);
+    var $midPanel = $('.mid-panel');
+    var indexView = new Molyb.Views.NotesIndex({collection: notes});
+    $midPanel.html(indexView.render().$el);
 
     new Molyb.Routers.Router({
       notes: notes
     });
 
+    Molyb.noteEdit = new Molyb.Views.NoteEdit({
+      model: new Molyb.Models.Note()
+    });
+
     Backbone.history.start();
   }
-
 };
 
 $(document).ready(function(){
