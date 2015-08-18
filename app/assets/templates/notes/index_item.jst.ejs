@@ -1,18 +1,12 @@
 <a href ="#" class="edit-note list-group-item">
+<div>Created: <%= moment(note.escape("created_at")).fromNow() %> | Modified: <%= moment(note.escape("updated_at")).fromNow() %></div>
   <dl class= >
-    <dt>Title</dt>
-    <dd>
+    <u>
+      <dt>
+          <%= note.get("title") %>
+      </dt>
+    </u>
+    <dd><%= note.get("body").substring(0,160)%></dd>
 
-        <%= note.get("title") %>
-
-    </dd>
-    <dt>Content</dt>
-    <dd><%= note.get("body")%></dd>
-    <dd>
-      Created: <%= moment(note.get("created_at")).fromNow() %>
-    </dd>
-    <dd>
-      Modified: <%= moment(note.get("updated_at")).fromNow() %>
-    </dd>
   </dl>
 </a>

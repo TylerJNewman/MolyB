@@ -1,5 +1,6 @@
+User.destroy_all
 User.create({
-  name: moly
+  name: "moly",
   email: "molyb@molyb.com",
   password: "molyb123"
 })
@@ -20,6 +21,6 @@ Note.create(title: 'My first note', body: 'Yay!', owner_id: 1, notebook_id: 1)
 Note.create(title: 'My second note', body: '', owner_id: 1, notebook_id: 1)
 Note.create(title: 'My third note', body: 'Keep Going!', owner_id: 1, notebook_id: 1)
 
-Note.create(title: 'My first boat', body: 'Yay!', owner_id: 15, notebook_id: 15)
-Note.create(title: 'My second boat', body: '', owner_id: 15, notebook_id: 15)
-Note.create(title: 'My third boat', body: 'Keep Going!', owner_id: 15, notebook_id: 15)
+Note.create(title: 'My first boat', body: 'Yay!', owner_id: 17, notebook_id: 17)
+Note.create(title: 'My second boat', body: '', owner_id: 17, notebook_id: 17)
+Note.create(title: 'My third boat', body: 'Keep Going!', owner_id: 17, notebook_id: 17)
