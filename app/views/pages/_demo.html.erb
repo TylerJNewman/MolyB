@@ -1,0 +1,24 @@
+
+<section id="custom">
+
+  <div class="row">
+    <div class="col-3 custom-frame">
+      <%= form_for(demo_user, :url => session_path(demo_user)) do |f| %>
+
+      <fieldset>
+        <legend>Demo</legend>
+        <%= f.hidden_field :email, :value => 'molyb@molyb.com' %>
+        <%= f.hidden_field :password, :value => 'molyb123' %>
+
+        <div class="form-group">
+          <%= f.submit 'Log in', class: 'btn btn-primary btn-large btn-block' %>
+        </div>
+        <% end %>
+
+      </fieldset>
+    </div>
+  </div>
+</section>
+
+
+

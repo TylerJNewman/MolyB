@@ -1,5 +1,9 @@
 <a href ="#" class="edit-note list-group-item">
-<div>Created: <%= moment(note.escape("created_at")).fromNow() %> | Modified: <%= moment(note.escape("updated_at")).fromNow() %></div>
+<div>
+  <font size="1">
+    Created: <%= moment(note.escape("created_at")).fromNow() %>  |  Modified: <%= moment(note.escape("updated_at")).fromNow() %>
+  </font>
+</div>
   <dl class= >
     <u>
       <dt>

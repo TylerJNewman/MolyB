@@ -1,10 +1,10 @@
 Molyb.Views.NoteEdit = Backbone.View.extend({
   template: JST["notes/edit"],
 
-  className: "container",
+  // className: "container",
 
   initialize: function () {
-    this.listenTo(this.model, "sync", this.render);
+    // this.listenTo(this.model, "sync", this.render);
     // this.listenTo(this.model, "sync", this.updateAttrs);
   },
 
@@ -46,9 +46,8 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
   },
 
   render: function () {
-    this.editor();
     this.$el.html(this.template({note: this.model}));
-
+    this.editor();
     return this;
   },
 

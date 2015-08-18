@@ -14,23 +14,15 @@
       window.user_id = "<%= current_user.id %>"
     </script>
   <% end %>
+<!--
+  <div class="container"> -->
 
-  <div class="container">
-
-      <div id="navbar"></div>
-   <!--  <% unless user_signed_in? %>
-
-      <div class="jumbotron">
-        <h1><span class="glyphicon glyphicon-fire">Molyb</h1>
-      </div>
-
-    <% end %> -->
 
     <%= yield %>
 
 
-
+<!--
   </div>
-
+ -->
 </body>
 </html>

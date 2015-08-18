@@ -24,7 +24,7 @@
 
 
 
- .devise-frame {
+ .custom-frame {
    position: relative;
    padding: 30px;
    max-width: 470px;
@@ -162,4 +162,21 @@ ul#notes-index
 .text-area.note-editor {
   overflow-y: auto;
 }
+
+
+// auto log in
+
+ demo-user {
+     background: #69ad31;
+     padding: 8px 16px;
+     box-shadow: 0 1.5px 0 0 #070;
+     border-radius: 3px;
+     color: white;
+     cursor: pointer;
+     margin: auto;
+     margin-bottom: 30px;
+     width: 300px;
+     text-align: center;
+ }
+
 
