@@ -10,7 +10,7 @@ class Api::NotesController < ApplicationController
   end
 
   def index
-    @notes = current_user.notes.order({created_at: :asc})
+    @notes = current_user.notes.order({updated_at: :asc})
     render json: @notes
   end
 
