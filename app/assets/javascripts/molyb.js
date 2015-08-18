@@ -24,6 +24,8 @@ window.Molyb = {
       model: new Molyb.Models.Note()
     });
 
+    window.id = null;
+
     Backbone.history.start();
   }
 };

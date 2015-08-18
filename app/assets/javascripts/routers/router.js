@@ -20,7 +20,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
   },
 
   editNote: function (id) {
-    console.log("editing with id: " + id);
+    window.id = id;
     var model = this.notes.getOrFetch(id);
     var editNoteView = new Molyb.Views.NoteEdit({model: model, collection: this.notes});
     this._swapRight(editNoteView);

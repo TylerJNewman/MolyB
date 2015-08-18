@@ -31,7 +31,6 @@ Molyb.Views.NotesIndexItem = Backbone.View.extend({
   },
 
   showNote: function (e) {
-
     e.preventDefault();
     Backbone.history.navigate(this.model.url(), {trigger: true});
   },
