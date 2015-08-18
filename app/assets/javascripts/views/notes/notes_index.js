@@ -2,6 +2,7 @@ Molyb.Views.NotesIndex = Backbone.View.extend({
   template: JST["notes/index"],
 
   // className: "container col-sm-12",
+  comparator: "updated_at",
 
   initialize: function () {
     this.listenTo(this.collection, "sync", this.render);

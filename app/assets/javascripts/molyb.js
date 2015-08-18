@@ -4,12 +4,13 @@ window.Molyb = {
   Views: {},
   Routers: {},
   initialize: function() {
-    var $navbar = $('#navbar');
-    var navBarView = new Molyb.Views.NavBar();
-    $navbar.prepend(navBarView.render().$el);
 
     notes = new Molyb.Collections.Notes();
     notes.fetch();
+
+    var $navbar = $('#navbar');
+    var navBarView = new Molyb.Views.NavBar({collection: notes});
+    $navbar.prepend(navBarView.render().$el);
 
     var $midPanel = $('.mid-panel');
     var indexView = new Molyb.Views.NotesIndex({collection: notes});
