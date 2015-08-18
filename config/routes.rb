@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   resource :session, :only => [:new, :create, :destroy]
-  resources :users, :only => [:new, :create, :show, :index, :edit, :update, :destroy]
+  resources :users
 
   namespace :api, defaults: { format: :json } do
     resources :notes, except: [:new]
