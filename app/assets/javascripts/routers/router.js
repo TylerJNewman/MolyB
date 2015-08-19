@@ -7,6 +7,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
     this.$bodyEl = $("div.text-area");
     this.notes = options.notes;
     this.notebook = new Molyb.Collections.NoteBooks();
+    this.listenTo(this.notes, '')
   },
 
   routes: {
@@ -22,6 +23,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
   },
 
   showNote: function (id) {
+    if (_.isEmpty(this.notes.models)) { return; }
     window.id = id;
     var model = this.notes.getOrFetch(id);
     var bodyNoteView = new Molyb.Views.NoteBody({model: model, collection: this.notes});

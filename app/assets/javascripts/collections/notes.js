@@ -4,19 +4,28 @@ Molyb.Collections.Notes = Backbone.Collection.extend({
   model: Molyb.Models.Note,
 
   getOrFetch: function (id) {
-      var notes = this.get(id);
+      var note = this.get(id);
       var that = this;
-      if(!notes) {
-        notes = new Molyb.Models.Note({ id: id });
-        notes.fetch({
+      if(!note) {
+        note = new Molyb.Models.Note({ id: id });
+        note.fetch({
           success: function () {
-            that.add(notes);
+            that.add(note);
           },
         });
       } else {
-        notes.fetch();
+        note.fetch();
       }
-      return notes;
+      return note;
+    },
+
+    getNote: function (id) {
+      var note = this.get(id);
+      if(!note) {
+        note = new Molyb.Models.Note({ id: id });
+      }
+
+      return note;
     }
 
 });

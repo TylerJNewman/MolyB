@@ -1,7 +1,6 @@
 Molyb.Views.NoteEdit = Backbone.View.extend({
   template: JST["notes/edit"],
 
-
   events: {
     "blur div.text-area": "save",
     "change": "save"
@@ -10,6 +9,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
   save: function (e) {
     var title = this.$('.note-title').val();
     var body = this.$("div.text-area").html();
+    this.model = this.collection.getNote(window.id);
     var that = this;
     this.model.set({title: title, body: body});
     this.model.save({}, {
