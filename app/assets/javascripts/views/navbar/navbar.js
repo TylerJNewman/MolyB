@@ -22,8 +22,18 @@ Molyb.Views.NavBar = Backbone.View.extend({
   destroyNote: function (e) {
     var model = this.collection.getOrFetch(window.id);
     model.destroy();
-    var previous_model = this.collection.models[this.collection.models.length - 1];
-    Backbone.history.navigate(previous_model.url(), {trigger: true});
+    var url = "";
+    if (_.isEmpty(this.collection.models)) {
+      this.disableDestroyNoteButton(e);
+    }
+    else {
+      this.enableDestroyNoteButton(e);
+      console.log(url);
+      var previous_model = this.collection.models[this.collection.models.length - 1];
+      url = previous_model.url();
+    }
+
+    Backbone.history.navigate(url, {trigger: true});
   },
 
   showDropdown: function(e) {
@@ -35,6 +45,14 @@ Molyb.Views.NavBar = Backbone.View.extend({
 
   hideDropdown: function(e) {
     $(".options-dropdown").not("hidden").addClass("hidden");
+  },
+
+  disableDestroyNoteButton: function (e) {
+    $(e.currentTarget).attr('disabled', true);
+  },
+
+  enableDestroyNoteButton: function (e) {
+    $(e.currentTarget).attr('disabled', false);
   },
 
   render: function() {

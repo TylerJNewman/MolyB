@@ -21,4 +21,3 @@ Molyb.Collections.NoteBooks = Backbone.Collection.extend({
 
 });
 
-Molyb.Collections.notebooks = new Molyb.Collections.NoteBooks();
