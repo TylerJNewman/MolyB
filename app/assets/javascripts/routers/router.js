@@ -3,14 +3,16 @@ Molyb.Routers.Router = Backbone.Router.extend({
     this.$leftEl = $('.left-panel');
     this.$midEl = $('.mid-panel');
     this.$rightEl = $('.right-panel');
+    this.$titleEl = $('.note-title');
+    this.$bodyEl = $("div.text-area");
     this.notes = options.notes;
     this.notebook = new Molyb.Collections.NoteBooks();
   },
 
   routes: {
     "": "notesIndex",
-    "api/notes/:id": "editNote",
-    'api/notebooks/:id': 'showNotebook',
+    "notes/:id": "showNote",
+    'notebooks/:id': 'showNotebook',
   },
 
   notesIndex: function () {
@@ -19,12 +21,20 @@ Molyb.Routers.Router = Backbone.Router.extend({
     this._swapMid(indexView);
   },
 
-  editNote: function (id) {
+  showNote: function (id) {
     window.id = id;
     var model = this.notes.getOrFetch(id);
-    var editNoteView = new Molyb.Views.NoteEdit({model: model, collection: this.notes});
-    this._swapRight(editNoteView);
+    var bodyNoteView = new Molyb.Views.NoteBody({model: model, collection: this.notes});
+    this._swapBody(bodyNoteView);
+    this.$titleEl.val(model.escape('title'));
   },
+
+  // editNote: function (id) {
+  //   window.id = id;
+  //   var model = this.notes.getOrFetch(id);
+  //   var editNoteView = new Molyb.Views.NoteEdit({model: model, collection: this.notes});
+  //   this._swapRight(editNoteView);
+  // },
 
 
   // showNote: function (id) {
@@ -41,11 +51,11 @@ Molyb.Routers.Router = Backbone.Router.extend({
   // },
 
 
-  _swapLeft: function (view) {
-    this._leftListView && this._leftListView.remove();
-    this._leftListView = view;
-    this.$leftEl.html(view.render().$el);
-  },
+  // _swapLeft: function (view) {
+  //   this._leftListView && this._leftListView.remove();
+  //   this._leftListView = view;
+  //   this.$leftEl.html(view.render().$el);
+  // },
 
   _swapMid: function (view) {
     this._midListView && this._midListView.remove();
@@ -53,10 +63,18 @@ Molyb.Routers.Router = Backbone.Router.extend({
     this.$midEl.html(view.render().$el);
   },
 
-  _swapRight: function (view) {
-    this._rightListView && this._rightListView.remove();
-    this._rightListView = view;
-    this.$rightEl.html(view.render().$el);
+  _swapBody: function (view) {
+    this._bodyListView && this._bodyListView.remove();
+    this._bodyListView = view;
+    this.$bodyEl.html(view.render().$el);
   },
+
+  // _swapRight: function (view) {
+  //   this._rightListView && this._rightListView.remove();
+  //   this._rightListView = view;
+  //   this.$rightEl.html(view.render().$el);
+  // },
+  //
+
 
 });

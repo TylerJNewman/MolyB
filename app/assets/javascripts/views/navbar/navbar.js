@@ -32,7 +32,7 @@ Molyb.Views.NavBar = Backbone.View.extend({
       url = previous_model.url();
     }
 
-    Backbone.history.navigate(url, {trigger: true});
+    Backbone.history.navigate("notes/" + previous_model.id, {trigger: true});
   },
 
   showDropdown: function(e) {

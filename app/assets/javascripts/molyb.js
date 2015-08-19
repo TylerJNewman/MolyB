@@ -5,19 +5,18 @@ window.Molyb = {
   Routers: {},
   initialize: function() {
 
-    notes = new Molyb.Collections.Notes();
+    var notes = new Molyb.Collections.Notes();
     notes.fetch({ success: function () {
-      var model = notes.last();
       var url = "";
-      if (_.isEmpty(this.notes.models)) {
+      if (_.isEmpty(notes.models)) {
         // new note...
       }
       else {
-        var previous_model = this.notes.models[this.notes.models.length - 1];
+        var previous_model = notes.last();
         url = previous_model.url();
       }
 
-      Backbone.history.navigate(url, {trigger: true});
+      Backbone.history.navigate("notes/" + previous_model.id, {trigger: true});
 
     }});
 
@@ -33,9 +32,9 @@ window.Molyb = {
     // window.id = id;
     // var model = this.notes.getOrFetch(id);
     //
-    var model = new Molyb.Models.Note();
+    var model = new Molyb.Models.Note({notebook_id: 1});
     var $rightPanel = $('.right-panel');
-    var editNoteView = new Molyb.Views.NoteEdit({model: model, collection: this.notes});
+    var editNoteView = new Molyb.Views.NoteEdit({model: model, collection: notes});
     $rightPanel.html(editNoteView.render().$el);
 
 
