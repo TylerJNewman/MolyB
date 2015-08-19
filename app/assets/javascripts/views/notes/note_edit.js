@@ -37,12 +37,12 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
          "html": false, //Button which allows you to edit the generated HTML. Default false
          "link": true, //Button to insert a link. Default true
          "image": true, //Button to insert an image. Default true,
-         "color": true, //Button to change color of font
-         "blockquote": true, //Blockquote
+         "color": false, //Button to change color of font
+         "blockquote": false, //Blockquote
          "size": "sm" //default: none, other options are xs, sm, lg
        }
     });
-    this.$("iframe").attr("name", "note-edit");
+    // this.$("iframe").attr("name", "note-edit");
   },
 
   render: function () {

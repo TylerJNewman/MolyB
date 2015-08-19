@@ -28,7 +28,6 @@ Molyb.Views.NavBar = Backbone.View.extend({
     }
     else {
       this.enableDestroyNoteButton(e);
-      console.log(url);
       var previous_model = this.collection.models[this.collection.models.length - 1];
       url = previous_model.url();
     }
