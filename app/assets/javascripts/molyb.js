@@ -38,7 +38,8 @@ window.Molyb = {
 
 
     var router = new Molyb.Routers.Router({
-      notes: notes
+      notes: notes,
+      editNoteView: editNoteView
     });
 
     // Molyb.noteEdit = new Molyb.Views.NoteEdit({

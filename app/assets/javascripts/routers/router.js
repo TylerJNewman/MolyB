@@ -5,6 +5,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
     this.$rightEl = $('.right-panel');
     this.$titleEl = $('.note-title');
     this.$bodyEl = $(".note-content");
+    this.editNoteView = options.editNoteView;
     this.notes = options.notes;
     this.notebook = new Molyb.Collections.NoteBooks();
     // this.listenTo(this.notes, '')
@@ -24,15 +25,20 @@ Molyb.Routers.Router = Backbone.Router.extend({
 
   showNote: function (id) {
     if (_.isEmpty(this.notes.models)) { return; }
-    window.id = id;
-    var model = this.notes.getOrFetch(id);
-    var bodyNoteView = new Molyb.Views.NoteBody({
-      model: model,
-      collection: this.notes
-    });
+    if (this.currentNote){
+      this.editNoteView.save();
+      // this.currentNote.save();
+    }
 
-    $("div.text-area").html(model.get('body'));
-    this.$titleEl.val(model.get('title'));
+    this.currentNote = this.notes.getOrFetch(id);
+    window.id = id;
+    // var bodyNoteView = new Molyb.Views.NoteBody({
+    //   model: this.currentNote,
+    //   collection: this.notes
+    // });
+
+    $("div.text-area").html(this.currentNote.get('body'));
+    this.$titleEl.val(this.currentNote.get('title'));
   },
 
   // editNote: function (id) {
