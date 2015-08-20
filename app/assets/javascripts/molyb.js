@@ -11,7 +11,7 @@ window.Molyb = {
         // new note...
       }
       else {
-        var previous_model = notes.last();
+        var previous_model = notes.first();
         url = previous_model.url();
       }
       Backbone.history.navigate("", {trigger: true});

@@ -1,7 +1,7 @@
 Molyb.Views.NotesIndexItem = Backbone.View.extend({
   template: JST["notes/index_item"],
 
-  tagName: "note",
+  tagName: "li",
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
@@ -26,14 +26,14 @@ Molyb.Views.NotesIndexItem = Backbone.View.extend({
   // },
   //
   events: {
-    "click .edit-note": "showNote"
+    "mousedown .edit-note": "showNote"
   },
 
 
 
+
   showNote: function (e) {
-    e.preventDefault();
-    console.log('showing')
+    console.log('showing');
     Backbone.history.navigate("notes/" + this.model.id, {trigger: true});
   },
 

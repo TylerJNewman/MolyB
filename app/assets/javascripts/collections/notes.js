@@ -3,6 +3,10 @@ Molyb.Collections.Notes = Backbone.Collection.extend({
 
   model: Molyb.Models.Note,
 
+  comparator: function (model) {
+    return -Date.parse(model.escape("updated_at"));
+  },
+
   getOrFetch: function (id) {
       var note = this.get(id);
       var that = this;

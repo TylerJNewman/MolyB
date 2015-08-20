@@ -1,25 +1,32 @@
 Molyb.Views.NoteEdit = Backbone.View.extend({
   template: JST["notes/edit"],
 
+  // initialize: function (options) {
+  //   this.reorderViews = options.reorderViews;
+  // },
+
   events: {
     "blur div.text-area": "save",
     "change": "save"
   },
 
   save: function (e) {
-    console.log('saving');
+
+    console.log('saving Note:' + window.id);
     var title = this.$('.note-title').val();
     var body = this.$("div.text-area").html();
     this.model = this.collection.getNote(window.id);
     var that = this;
-    this.model.set({title: title, body: body});
-    this.model.save({}, {
+    this.model.set({
+      title: title,
+      body: body
+    });
+    that.model.save({}, {
       success: function () {
         that.collection.add(that.model, { merge: true });
       }
     });
   },
-
 
   editor: function () {
     this.$('.note-editor').wysihtml5({

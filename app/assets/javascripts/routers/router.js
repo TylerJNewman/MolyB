@@ -31,8 +31,8 @@ Molyb.Routers.Router = Backbone.Router.extend({
       collection: this.notes
     });
 
-    this._swapBody(bodyNoteView);
-    this.$titleEl.val(model.escape('title'));
+    $("div.text-area").html(model.get('body'));
+    this.$titleEl.val(model.get('title'));
   },
 
   // editNote: function (id) {
