@@ -5,7 +5,7 @@ Molyb.Views.NotesIndex = Backbone.View.extend({
   comparator: "updated_at",
 
   initialize: function () {
-    this.listenTo(this.collection, "sync", this.render);
+    // this.listenTo(this.collection, "sync", this.render);
   },
 
 
@@ -15,12 +15,12 @@ Molyb.Views.NotesIndex = Backbone.View.extend({
     //   console.log(note);
     // });
     this.$el.html(this.template());
-    this.collection.forEach(this.renderNote);
+    this.collection.forEach(this.renderNote.bind(this));
     return this;
   },
 
   renderNote: function (note) {
-     view = new Molyb.Views.NotesIndexItem({model: note, tagName: 'li'});
+     view = new Molyb.Views.NotesIndexItem({model: note, collection: this.collection, tagName: 'li'});
      this.$('#notes-index').prepend(view.render().el);
   }
 });

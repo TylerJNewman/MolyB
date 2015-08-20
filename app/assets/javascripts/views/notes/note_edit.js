@@ -7,6 +7,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
   },
 
   save: function (e) {
+    console.log('saving');
     var title = this.$('.note-title').val();
     var body = this.$("div.text-area").html();
     this.model = this.collection.getNote(window.id);
