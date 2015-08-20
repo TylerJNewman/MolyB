@@ -7,15 +7,16 @@ window.Molyb = {
     var notes = new Molyb.Collections.Notes();
     notes.fetch({ success: function () {
       var url = "";
+      var previous_model_id = "";
       if (_.isEmpty(notes.models)) {
         // new note...
       }
       else {
         var previous_model = notes.first();
-        url = previous_model.url();
+        previous_model_id = previous_model.id;
       }
       Backbone.history.navigate("", {trigger: true});
-      Backbone.history.navigate("notes/" + previous_model.id, {trigger: true});
+      Backbone.history.navigate("notes/" + previous_model_id, {trigger: true});
 
     }});
 
@@ -35,6 +36,8 @@ window.Molyb = {
     var $rightPanel = $('.right-panel');
     var editNoteView = new Molyb.Views.NoteEdit({collection: notes});
     $rightPanel.html(editNoteView.render().$el);
+    $('.wysihtml5-toolbar').append('<a class="btn btn-sm btn-default" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a>')
+
 
 
     var router = new Molyb.Routers.Router({

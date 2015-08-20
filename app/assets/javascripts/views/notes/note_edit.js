@@ -39,7 +39,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
          "image": true, //Button to insert an image. Default true,
          "color": false, //Button to change color of font
          "blockquote": false, //Blockquote
-         "size": "sm" //default: none, other options are xs, sm, lg
+         "size": "sm", //default: none, other options are xs, sm, lg
        }
     });
   },
@@ -47,6 +47,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
   render: function () {
     this.$el.html(this.template({note: this.model}));
     this.editor();
+
     return this;
   },
 });
