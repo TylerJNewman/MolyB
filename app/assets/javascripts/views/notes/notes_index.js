@@ -3,27 +3,46 @@ Molyb.Views.NotesIndex = Backbone.CompositeView.extend({
 
   // className: "container col-sm-12",
 
-  initialize: function () {
+  initialize: function (options) {
+    this.filteredCollection = this.collection.clone();
     // this.listenTo(this.collection, "sync", this.render);
     this.comparator = function (view) {
       return -Date.parse(view.model.get('updated_at'));
     };
+    // this.listenTo(this.collection, "sync", this.syncCollections);
     this.listenTo(this.collection, "sync", this.reorderViews);
-    this.collection.each(this.addNote.bind(this));
-    this.listenTo(this.collection, "add", this.addNote);
-    this.listenTo(this.collection, "remove", this.removeNote);
+
+    var navbar = options.navbar;
+
+
+
+    this.filteredCollection.each(this.addNote.bind(this));
+    // this.listenTo(this.collection, "add", this.addNote);
+    // this.listenTo(this.collection, "remove", this.removeNote);
+    this.listenTo(this.filteredCollection, "add", this.addNote);
+    this.listenTo(this.filteredCollection, "remove", this.removeNote);
+    this.listenTo(this.collection, "filter sync", this.updateFilter);
+  },
+
+  // syncCollections: function () {
+  //   this.filteredCollection.set(this.collection.models);
+  // },
+
+  updateFilter: function(args) {
+    var searchStr = args[0];
+    var filteredModels = this.collection.search(searchStr);
+    this.filteredCollection.set(filteredModels);
   },
 
   render: function (obj) {
-    // if (obj && obj !== this.collection) { return; }
-    // console.log(this.collection);
-    // this.collection.each(function (note){
-    //   console.log(note);
-    // });
     this.$el.html(this.template());
     this.attachSortedSubviews('#notes-index');
-    // this.collection.forEach(this.renderNote.bind(this));
     return this;
+  },
+
+  renderList: function () {
+    // this.filteredCollection = this.collection.search(navbar.searchText);
+    // this.filteredCollection.each(this.addNote.bind(this));
   },
 
   reorderViews: function () {

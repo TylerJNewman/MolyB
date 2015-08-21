@@ -9,10 +9,26 @@ class Api::NotesController < ApplicationController
     end
   end
 
+  # def index
+  #   @notes = Note.search(params[:search])
+  #   # @notes = current_user.notes.search(params)
+  #   render json: @notes
+
+
+  # end
+
   def index
-    @notes = current_user.notes.order({updated_at: :asc})
-    render json: @notes
+    if params[:search] && params[:search] != ""
+
+      @notes = current_user.notes.search_by_title_and_body(params[:search])
+      render json: @notes
+    else
+      @notes = current_user.notes
+      render json: @notes
+
+    end
   end
+
 
   def update
     @note = Note.find(params[:id])

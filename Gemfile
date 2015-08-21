@@ -18,6 +18,7 @@ gem 'uuidtools'
 gem 'letter_opener', '~> 1.4.1'
 gem 'bcrypt'
 gem 'bootstrap-wysihtml5-rails'
+gem "pg_search"
 
 
 group :development, :test do

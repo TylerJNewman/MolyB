@@ -8,6 +8,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
     this.editNoteView = options.editNoteView;
     this.notes = options.notes;
     this.notebook = new Molyb.Collections.NoteBooks();
+    this.navbar = options.navbar;
     // this.listenTo(this.notes, '')
   },
 
@@ -19,7 +20,7 @@ Molyb.Routers.Router = Backbone.Router.extend({
 
   notesIndex: function () {
     this.notes.fetch();
-    var indexView = new Molyb.Views.NotesIndex({collection: this.notes});
+    var indexView = new Molyb.Views.NotesIndex({collection: this.notes, navbar: this.navbar});
     this._swapMid(indexView);
   },
 

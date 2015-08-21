@@ -7,6 +7,23 @@ Molyb.Collections.Notes = Backbone.Collection.extend({
     return -Date.parse(model.escape("updated_at"));
   },
 
+  search : function(letters){
+      if(letters === undefined || letters == "") return this.models.slice();
+
+      var titleModels = this.filter(function(data) {
+        var pattern = new RegExp(letters,"gi");
+        return pattern.test(data.get("title"));
+      });
+
+      var bodyModels = this.filter(function(data) {
+        var pattern = new RegExp(letters,"gi");
+        return pattern.test(data.get("body"));
+      });
+
+
+      return titleModels.concat(bodyModels);
+    },
+
   getOrFetch: function (id) {
       var note = this.get(id);
       var that = this;

@@ -8,6 +8,7 @@ Molyb.Views.NavBar = Backbone.View.extend({
   events: {
     "click .nav-right-item": "showDropdown",
     "click .create-new-note": "createNote",
+    "input .instant-search": "queryTextInput",
   },
 
   createNote: function () {
@@ -21,6 +22,16 @@ Molyb.Views.NavBar = Backbone.View.extend({
         Backbone.history.navigate("notes/" + note.id, {trigger: true});
       }
     });
+  },
+
+  queryTextInput: function(event) {
+
+    event.preventDefault();
+    this.searchText = $(event.currentTarget).closest("form").serializeJSON().search;
+    this.collection.trigger("filter", [this.searchText]);
+    // this.collection.trigger('sync');
+    // this.collection.sync("read", this.collection.models);
+
   },
 
   showDropdown: function(e) {

@@ -25,7 +25,7 @@ window.Molyb = {
     $navbar.prepend(navBarView.render().$el);
 
     var $midPanel = $('.mid-panel');
-    var indexView = new Molyb.Views.NotesIndex({collection: notes});
+    var indexView = new Molyb.Views.NotesIndex({collection: notes, navbar: navBarView});
     $midPanel.html(indexView.render().$el);
 
     // debugger;
@@ -42,7 +42,8 @@ window.Molyb = {
 
     var router = new Molyb.Routers.Router({
       notes: notes,
-      editNoteView: editNoteView
+      editNoteView: editNoteView,
+      navbar: navBarView
     });
 
     // Molyb.noteEdit = new Molyb.Views.NoteEdit({
