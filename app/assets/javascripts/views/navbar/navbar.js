@@ -17,7 +17,7 @@ Molyb.Views.NavBar = Backbone.View.extend({
       notebook_id: "1"
     }, {
       success: function(note) {
-        console.log('saved!!' + note.id)
+
         Backbone.history.navigate("notes/" + note.id, {trigger: true});
       }
     });

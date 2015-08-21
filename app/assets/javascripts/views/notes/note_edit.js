@@ -10,19 +10,20 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
 
   deleteNote: function (e) {
     var model = this.collection.getOrFetch(window.id);
+    console.log("deleting: " + window.id)
     model.destroy({
 
-      success: function () {
+      success: function (model) {
         var previous_model_id = "";
         if (_.isEmpty(this.collection.models)) {
-          $('.delete-button').prop('disabled', true);
+          // $('.delete-button').prop('disabled', true);
         }
         else {
-          $('.delete-button').prop('disabled', false);
+          // $('.delete-button').prop('disabled', false);
           var previous_model = this.collection.first();
           previous_model_id = previous_model.id;
         }
-        console.log('navigate');
+        console.log("deleted: " + model.id)
         Backbone.history.navigate("", {trigger: true});
         Backbone.history.navigate("notes/" + previous_model_id, {trigger: true});
       }.bind(this)
@@ -39,7 +40,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
       title: title,
       body: body
     });
-    console.log('another save' + that.model.id)
+
     that.model.save({}, {
       success: function () {
         that.collection.add(that.model, { merge: true });
@@ -60,13 +61,17 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
          "blockquote": false, //Blockquote
          "size": "sm", //default: none, other options are xs, sm, lg
        }
+
+
     });
   },
 
   render: function () {
+    console.log('render')
     this.$el.html(this.template({note: this.model}));
     this.editor();
 
+    this.$('.wysihtml5-toolbar').append('<a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a>');
     return this;
   },
 });

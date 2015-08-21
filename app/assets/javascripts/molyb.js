@@ -8,10 +8,10 @@ window.Molyb = {
     notes.fetch({ success: function () {
       var previous_model_id = "";
       if (_.isEmpty(notes.models)) {
-        $('.delete-button').prop('disabled', true);
+        // $('.delete-button').prop('disabled', true);
       }
       else {
-        $('.delete-button').prop('disabled', false);
+        // $('.delete-button').prop('disabled', false);
         var previous_model = notes.first();
         previous_model_id = previous_model.id;
       }
@@ -36,7 +36,7 @@ window.Molyb = {
     var $rightPanel = $('.right-panel');
     var editNoteView = new Molyb.Views.NoteEdit({collection: notes});
     $rightPanel.html(editNoteView.render().$el);
-    $('.wysihtml5-toolbar').append('<a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a>');
+    // $('.wysihtml5-toolbar').append('<a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a>');
 
 
 

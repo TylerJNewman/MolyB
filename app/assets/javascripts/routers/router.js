@@ -26,14 +26,14 @@ Molyb.Routers.Router = Backbone.Router.extend({
   showNote: function (id) {
     if (_.isEmpty(this.notes.models)) { return; }
     if (this.currentNote) {
-      console.log('saving ' + window.id)
+
       this.notes.get(window.id) && this.editNoteView.save();
       // this.currentNote.save();
     }
 
     this.currentNote = this.notes.getOrFetch(id);
     window.id = id;
-    console.log(window.id)
+
     // var bodyNoteView = new Molyb.Views.NoteBody({
     //   model: this.currentNote,
     //   collection: this.notes
