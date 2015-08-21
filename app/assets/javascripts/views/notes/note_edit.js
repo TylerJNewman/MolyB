@@ -1,18 +1,36 @@
 Molyb.Views.NoteEdit = Backbone.View.extend({
   template: JST["notes/edit"],
 
-  // initialize: function (options) {
-  //   this.reorderViews = options.reorderViews;
-  // },
 
   events: {
     "blur div.text-area": "save",
-    "change": "save"
+    "change .note-title": "save",
+    "click .delete-button": "deleteNote"
   },
 
-  save: function (e) {
+  deleteNote: function (e) {
+    var model = this.collection.getOrFetch(window.id);
+    model.destroy({
 
-    console.log('saving Note:' + window.id);
+      success: function () {
+        var previous_model_id = "";
+        if (_.isEmpty(this.collection.models)) {
+          $('.delete-button').prop('disabled', true);
+        }
+        else {
+          $('.delete-button').prop('disabled', false);
+          var previous_model = this.collection.first();
+          previous_model_id = previous_model.id;
+        }
+        console.log('navigate');
+        Backbone.history.navigate("", {trigger: true});
+        Backbone.history.navigate("notes/" + previous_model_id, {trigger: true});
+      }.bind(this)
+    });
+
+  },
+
+  save: function () {
     var title = this.$('.note-title').val();
     var body = this.$("div.text-area").html();
     this.model = this.collection.getNote(window.id);
@@ -21,6 +39,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
       title: title,
       body: body
     });
+    console.log('another save' + that.model.id)
     that.model.save({}, {
       success: function () {
         that.collection.add(that.model, { merge: true });

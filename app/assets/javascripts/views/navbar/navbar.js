@@ -8,31 +8,19 @@ Molyb.Views.NavBar = Backbone.View.extend({
   events: {
     "click .nav-right-item": "showDropdown",
     "click .create-new-note": "createNote",
-    "click .destroy-note": "destroyNote"
   },
 
   createNote: function () {
-    this.collection.create({
+    var note = this.collection.create({
       title: "Untitled",
       body: " ",
       notebook_id: "1"
+    }, {
+      success: function(note) {
+        console.log('saved!!' + note.id)
+        Backbone.history.navigate("notes/" + note.id, {trigger: true});
+      }
     });
-  },
-
-  destroyNote: function (e) {
-    var model = this.collection.getOrFetch(window.id);
-    model.destroy();
-    var url = "";
-    if (_.isEmpty(this.collection.models)) {
-      this.disableDestroyNoteButton(e);
-    }
-    else {
-      this.enableDestroyNoteButton(e);
-      var previous_model = this.collection.models[this.collection.models.length - 1];
-      url = previous_model.url();
-    }
-
-    Backbone.history.navigate("notes/" + previous_model.id, {trigger: true});
   },
 
   showDropdown: function(e) {
