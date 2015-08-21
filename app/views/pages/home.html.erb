@@ -15,9 +15,11 @@
     <%= render partial: "demo"%>
   <% end %>
 
+  <% if user_signed_in? %>
+    <section class="mid-panel col-sm-3"></section>
+    <section class="right-panel col-sm-9"></section>
+  <% end %>
 
-  <section class="mid-panel col-sm-3"></section>
-  <section class="right-panel col-sm-9"></section>
 
 </div>
 </container>

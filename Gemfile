@@ -19,9 +19,11 @@ gem 'letter_opener', '~> 1.4.1'
 gem 'bcrypt'
 gem 'bootstrap-wysihtml5-rails'
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'seed_dump'
   gem 'annotate'
   gem 'pry-rails'
   gem 'better_errors'
