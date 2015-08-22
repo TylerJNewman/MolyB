@@ -13,6 +13,15 @@
 
   <% unless user_signed_in? %>
     <%= render partial: "demo"%>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- stats - count particles -->
+    <div class="count-particles">
+      <span class="js-count-particles"></span>
+    </div>
+
+    <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
   <% end %>
 
   <% if user_signed_in? %>

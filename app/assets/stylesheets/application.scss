@@ -25,21 +25,11 @@
 
 
 
- .custom-frame {
-   position: relative;
-   padding: 30px;
-   max-width: 470px;
-   border-radius: 2px;
-   background: white;
-   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
- }
+
 
 html, body {
  height: 100%;
- // background-color: #002A41;
+ // background-color: #272b30;
 }
 
 body {
@@ -63,7 +53,7 @@ body {
 }
 
 .navbar {
-  background: #141F27;
+  background: #272b30;
   height: 100%;
 }
 
@@ -89,7 +79,7 @@ body {
 
 .navbar{
    right: auto;
-   // background-color: #141F27;
+   // background-color: #272b30;
    border: none;
  }
 }
@@ -173,3 +163,5 @@ ul#notes-index
  height: 600px;
  overflow-y: auto;
 }
+
+

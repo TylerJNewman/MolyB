@@ -10,7 +10,6 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
 
   deleteNote: function (e) {
     var model = this.collection.getOrFetch(window.id);
-    console.log("deleting: " + window.id)
     model.destroy({
 
       success: function (model) {
@@ -67,7 +66,6 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
   },
 
   render: function () {
-    console.log('render')
     this.$el.html(this.template({note: this.model}));
     this.editor();
 
