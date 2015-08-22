@@ -38,6 +38,7 @@
 
 html, body {
  height: 100%;
+ background-color: #002A41;
 }
 
 body {
@@ -54,26 +55,13 @@ body {
   font-weight: bold;
 }
 
-.jumbotron h1 {
-  color: rgb(18, 83, 164);
-}
-
-.jumbotron, .container-fluid .jumbotron {
-  padding-left: 60px;
-  padding-right: 60px;
-  margin: 4% 3%;
-}
-
-.glyphicon-fire:before {
-  color: rgb(242, 105, 100);
-}
 
 #navbar {
   height: 50px;
 }
 
 .navbar {
-  background: rgba(255, 212, 100, 1);
+  background: #141F27;
   height: 100%;
 }
 
@@ -99,7 +87,7 @@ body {
 
 .navbar{
    right: auto;
-   background-color: rgba(255, 212, 100, 1);
+   background-color: #141F27;
    border: none;
  }
 }
@@ -180,6 +168,6 @@ ul#notes-index
  }
 
  section.mid-panel.col-sm-3 {
- height: 453px;
+ height: 600px;
  overflow-y: auto;
 }

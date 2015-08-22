@@ -2,6 +2,7 @@ Molyb.Views.NotesIndex = Backbone.CompositeView.extend({
   template: JST["notes/index"],
 
   // className: "container col-sm-12",
+  className: "content",
 
   initialize: function (options) {
     this.filteredCollection = this.collection.clone();
