@@ -55,4 +55,27 @@ input.form-control.instant-search {
     background: #383C41;
     box-shadow: none;
 }
+$blue: rgb(85,181,219);
+$green: rgb(159,202,86);
+$yellow: rgb(230,205,105);
+$red: rgb(205,63,69);
+$purple: rgb(160,116,196);
+
+span.wysiwyg-color-black {color: black;}
+span.wysiwyg-color-silver {color: silver;}
+span.wysiwyg-color-gray {color: gray;}
+span.wysiwyg-color-white {color: white;}
+span.wysiwyg-color-maroon {color: maroon;}
+span.wysiwyg-color-red {color: $red;}
+span.wysiwyg-color-purple {color: $purple;}
+span.wysiwyg-color-fuchsia {color: fuchsia;}
+span.wysiwyg-color-green {color: $green;}
+span.wysiwyg-color-lime {color: lime;}
+span.wysiwyg-color-olive {color: olive;}
+span.wysiwyg-color-yellow {color: $yellow;}
+span.wysiwyg-color-navy {color: navy;}
+span.wysiwyg-color-blue {color: $blue;}
+span.wysiwyg-color-teal {color: teal;}
+span.wysiwyg-color-aqua {color: aqua;}
+span.wysiwyg-color-orange {color: orange;}
 

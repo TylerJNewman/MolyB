@@ -52,13 +52,6 @@ Molyb.Views.NavBar = Backbone.View.extend({
     $(".options-dropdown").not("hidden").addClass("hidden");
   },
 
-  disableDestroyNoteButton: function (e) {
-    $(e.currentTarget).attr('disabled', true);
-  },
-
-  enableDestroyNoteButton: function (e) {
-    $(e.currentTarget).attr('disabled', false);
-  },
 
   render: function() {
     var renderedContent = this.template();

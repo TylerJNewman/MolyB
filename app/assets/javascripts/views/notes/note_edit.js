@@ -53,9 +53,9 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
          "emphasis": true, //Italics, bold, etc. Default true
          "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
          "html": false, //Button which allows you to edit the generated HTML. Default false
-         "link": true, //Button to insert a link. Default true
-         "image": true, //Button to insert an image. Default true,
-         "color": true, //Button to change color of font
+         "link": false, //Button to insert a link. Default true
+         "image": false, //Button to insert an image. Default true,
+         "color": false, //Button to change color of font
          "blockquote": false, //Blockquote
          "size": "sm", //default: none, other options are xs, sm, lg
        }
@@ -64,11 +64,29 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     });
   },
 
+  colorPickerDropdown: function () {
+    var strVar="";
+    strVar += "<li class=\"dropdown\">";
+    strVar += "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Color <span class=\"caret\"><\/span><\/a>";
+    strVar += "<ul class=\"dropdown-menu\">";
+    strVar += "<li><a href=\"#\" class=\"blue\"><span style=\"background-color:rgb(85,181,219)\">      <\/span><\/a><\/li>";
+    strVar += "<li><a href=\"#\" class=\"green\"><span style=\"background-color:rgb(159,202,86)\">      <\/span><\/a><\/li>";
+    strVar += "<li><a href=\"#\" class=\"yellow\"><span style=\"background-color:rgb(230,205,105)\">      <\/span><\/a><\/li>";
+    strVar += "<li><a href=\"#\" class=\"red\"><span style=\"background-color:rgb(205,63,69)\">      <\/span><\/a><\/li>";
+    strVar += "<li><a href=\"#\" class=\"purple\"><span style=\"background-color:rgb(160,116,196)\">      <\/span><\/a><\/li>";
+    strVar += "<\/ul>";
+    strVar += "<\/li>";
+
+    return strVar;
+  },
+
+
   render: function () {
     this.$el.html(this.template({note: this.model}));
     this.editor();
 
-    this.$('.wysihtml5-toolbar').append('<a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a>');
+    this.$('.wysihtml5-toolbar').append('<li><a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a></li>');
+    this.$('.wysihtml5-toolbar').append('<li><div class="dropdown"> <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-triangle-bottom"></button> <ul class="dropdown-menu"> <li><a href="#" class="blue"><span style="color:rgb(85,181,219)">Blue</span></a></li> <li><a href="#" class="green"><span style="color:rgb(159,202,86)">Green</span></a></li> <li><a href="#" class="yellow"><span style="color:rgb(230,205,105)">Yellow</span></a></li> <li><a href="#" class="red"><span style="color:rgb(205,63,69)">Yellow</span></a></li> <li><a href="#" class="purple"><span style="color:rgb(160,116,196)">Purple</span></a></li> </ul> </div></li>');
     return this;
   },
 });

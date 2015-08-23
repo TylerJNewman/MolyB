@@ -101,4 +101,22 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   background: orange !important;
 }
 
+span.wysiwyg-color-black {color: black;},
+span.wysiwyg-color-silver {color: silver;},
+span.wysiwyg-color-gray {color: gray;},
+span.wysiwyg-color-white {color: white;},
+span.wysiwyg-color-maroon {color: maroon;},
+span.wysiwyg-color-red {color: red;},
+span.wysiwyg-color-purple {color: purple;},
+span.wysiwyg-color-fuchsia {color: fuchsia;},
+span.wysiwyg-color-green {color: green;},
+span.wysiwyg-color-lime {color: lime;},
+span.wysiwyg-color-olive {color: olive;},
+span.wysiwyg-color-yellow {color: yellow;},
+span.wysiwyg-color-navy {color: navy;},
+span.wysiwyg-color-blue {color: blue;},
+span.wysiwyg-color-teal {color: teal;},
+span.wysiwyg-color-aqua {color: aqua;},
+span.wysiwyg-color-orange {color: orange;}
+
 

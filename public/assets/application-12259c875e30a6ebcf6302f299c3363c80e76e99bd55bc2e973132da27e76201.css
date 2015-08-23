@@ -28413,6 +28413,10 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="blue"] {
   background: blue !important;
 }
 
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="yellow"] {
+  background: yellow !important;
+}
+
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   background: orange !important;
 }
