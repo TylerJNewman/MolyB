@@ -15,9 +15,16 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
   },
 
   changeColor: function (e) {
+    e.preventDefault();
     var color = e.currentTarget.className;
     $('.text-area.note-editor').children().children().unwrap();
+
     $('.text-area.note-editor').wrapInner( "<span class='wysiwyg-color-" + color +"'></div>");
+    if($('.glyphicon-triangle-bottom').parent().prop("tagName") === "SPAN") {
+      $('.glyphicon-triangle-bottom').unwrap();
+    };
+
+    $('.glyphicon-triangle-bottom').wrap("<span class='wysiwyg-color-" + color +"'></div>");
   },
 
   undoDelete: function () {
@@ -107,12 +114,13 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     this.$el.html(this.template({note: this.model}));
     this.editor();
 
-    this.$('.wysihtml5-toolbar').append('<li><div class="dropdown"> <button class="btn btn-sm btn-primary dropdown-toggle color-picker" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-triangle-bottom"></button> <ul class="dropdown-menu color-picker"> <li><a href="#" class="silver"><span style="color:#C8C8C8">Silver</span></a></li> <li><a href="#" class="blue"><span style="color:rgb(85,181,219)">Blue</span></a></li> <li><a href="#" class="green"><span style="color:rgb(159,202,86)">Green</span></a></li> <li><a href="#" class="yellow"><span style="color:rgb(230,205,105)">Yellow</span></a></li> <li><a href="#" class="red"><span style="color:rgb(205,63,69)">Red</span></a></li> <li><a href="#" class="purple"><span style="color:rgb(160,116,196)">Purple</span></a></li> </ul> </div></li>');
+    this.$('.wysihtml5-toolbar').append('<li><div class="dropdown"> <button class="btn btn-sm btn-default dropdown-toggle color-picker" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-triangle-bottom"></button> <ul class="dropdown-menu color-picker"> <li><a href="#" class="silver"><span style="color:#C8C8C8">Silver</span></a></li> <li><a href="#" class="blue"><span style="color:rgb(85,181,219)">Blue</span></a></li> <li><a href="#" class="green"><span style="color:rgb(159,202,86)">Green</span></a></li> <li><a href="#" class="yellow"><span style="color:rgb(230,205,105)">Yellow</span></a></li> <li><a href="#" class="red"><span style="color:rgb(205,63,69)">Red</span></a></li> <li><a href="#" class="purple"><span style="color:rgb(160,116,196)">Purple</span></a></li> </ul> </div></li>');
     this.$('.wysihtml5-toolbar').append('<li><a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a></li>');
     this.$('.wysihtml5-toolbar').append('<li><a class="btn btn-sm btn-default undo-button" data-wysihtml5-command="undoDeleteNote" title=" Undo delete" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-repeat" id="undo-glyphicon"></span></a></li>');
 
     $('.text-area.note-editor').children().children().unwrap();
-    $('.text-area.note-editor').wrapInner( "<span class='wysiwyg-color-'></div>");
+
+    $('.text-area.note-editor').wrapInner("<span class='wysiwyg-color-'></div>");
     return this;
   },
 });
