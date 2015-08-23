@@ -2,10 +2,20 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
   template: JST["notes/edit"],
 
 
+
+
   events: {
     "blur div.text-area": "save",
     "change .note-title": "save",
-    "click .delete-button": "deleteNote"
+    "click .delete-button": "deleteNote",
+    "click ul.dropdown-menu.color-picker > li > a": "changeColor"
+  },
+
+  changeColor: function (e) {
+    debugger;
+    var color = e.currentTarget.className;
+    $('.text-area.note-editor').children().children().unwrap();
+    $('.text-area.note-editor').wrapInner( "<span class='wysiwyg-color-" + color +"'></div>");
   },
 
   deleteNote: function (e) {
@@ -64,21 +74,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     });
   },
 
-  colorPickerDropdown: function () {
-    var strVar="";
-    strVar += "<li class=\"dropdown\">";
-    strVar += "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Color <span class=\"caret\"><\/span><\/a>";
-    strVar += "<ul class=\"dropdown-menu\">";
-    strVar += "<li><a href=\"#\" class=\"blue\"><span style=\"background-color:rgb(85,181,219)\">      <\/span><\/a><\/li>";
-    strVar += "<li><a href=\"#\" class=\"green\"><span style=\"background-color:rgb(159,202,86)\">      <\/span><\/a><\/li>";
-    strVar += "<li><a href=\"#\" class=\"yellow\"><span style=\"background-color:rgb(230,205,105)\">      <\/span><\/a><\/li>";
-    strVar += "<li><a href=\"#\" class=\"red\"><span style=\"background-color:rgb(205,63,69)\">      <\/span><\/a><\/li>";
-    strVar += "<li><a href=\"#\" class=\"purple\"><span style=\"background-color:rgb(160,116,196)\">      <\/span><\/a><\/li>";
-    strVar += "<\/ul>";
-    strVar += "<\/li>";
 
-    return strVar;
-  },
 
 
   render: function () {
@@ -86,7 +82,9 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     this.editor();
 
     this.$('.wysihtml5-toolbar').append('<li><a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a></li>');
-    this.$('.wysihtml5-toolbar').append('<li><div class="dropdown"> <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-triangle-bottom"></button> <ul class="dropdown-menu"> <li><a href="#" class="blue"><span style="color:rgb(85,181,219)">Blue</span></a></li> <li><a href="#" class="green"><span style="color:rgb(159,202,86)">Green</span></a></li> <li><a href="#" class="yellow"><span style="color:rgb(230,205,105)">Yellow</span></a></li> <li><a href="#" class="red"><span style="color:rgb(205,63,69)">Yellow</span></a></li> <li><a href="#" class="purple"><span style="color:rgb(160,116,196)">Purple</span></a></li> </ul> </div></li>');
+    this.$('.wysihtml5-toolbar').append('<li><div class="dropdown"> <button class="btn btn-sm btn-primary dropdown-toggle color-picker" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-triangle-bottom"></button> <ul class="dropdown-menu color-picker"> <li><a href="#" class="silver"><span style="color:#C8C8C8">Silver</span></a></li> <li><a href="#" class="blue"><span style="color:rgb(85,181,219)">Blue</span></a></li> <li><a href="#" class="green"><span style="color:rgb(159,202,86)">Green</span></a></li> <li><a href="#" class="yellow"><span style="color:rgb(230,205,105)">Yellow</span></a></li> <li><a href="#" class="red"><span style="color:rgb(205,63,69)">Red</span></a></li> <li><a href="#" class="purple"><span style="color:rgb(160,116,196)">Purple</span></a></li> </ul> </div></li>');
+    $('.text-area.note-editor').children().children().unwrap();
+    $('.text-area.note-editor').wrapInner( "<span class='wysiwyg-color-'></div>");
     return this;
   },
 });
