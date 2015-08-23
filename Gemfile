@@ -19,6 +19,7 @@ gem 'letter_opener', '~> 1.4.1'
 gem 'bcrypt'
 gem 'bootstrap-wysihtml5-rails'
 gem "pg_search"
+gem 'bootswatch-rails'
 
 
 group :development, :test do

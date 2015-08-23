@@ -61,6 +61,8 @@ GEM
       sass (>= 3.3.0)
     bootstrap-wysihtml5-rails (0.3.3.7)
       railties (>= 3.0)
+    bootswatch-rails (3.3.5)
+      railties (>= 3.1)
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -212,6 +214,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   bootstrap-wysihtml5-rails
+  bootswatch-rails
   byebug
   coffee-rails (~> 4.1.0)
   factory_girl_rails

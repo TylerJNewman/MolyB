@@ -22,7 +22,6 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
           var previous_model = this.collection.first();
           previous_model_id = previous_model.id;
         }
-        console.log("deleted: " + model.id)
         Backbone.history.navigate("", {trigger: true});
         Backbone.history.navigate("notes/" + previous_model_id, {trigger: true});
       }.bind(this)
@@ -56,7 +55,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
          "html": false, //Button which allows you to edit the generated HTML. Default false
          "link": true, //Button to insert a link. Default true
          "image": true, //Button to insert an image. Default true,
-         "color": false, //Button to change color of font
+         "color": true, //Button to change color of font
          "blockquote": false, //Blockquote
          "size": "sm", //default: none, other options are xs, sm, lg
        }
