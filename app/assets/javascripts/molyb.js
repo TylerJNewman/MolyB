@@ -33,8 +33,9 @@ window.Molyb = {
     // var model = this.notes.getOrFetch(id);
     //
     var model = new Molyb.Models.Note({notebook_id: 1});
+    var deletedNotes = new Molyb.Collections.DeletedNotes();
     var $rightPanel = $('.right-panel');
-    var editNoteView = new Molyb.Views.NoteEdit({collection: notes});
+    var editNoteView = new Molyb.Views.NoteEdit({collection: notes, deletedNotes: deletedNotes});
     $rightPanel.html(editNoteView.render().$el);
     // $('.wysihtml5-toolbar').append('<a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a>');
 

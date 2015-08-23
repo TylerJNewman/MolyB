@@ -79,3 +79,12 @@ span.wysiwyg-color-teal {color: teal;}
 span.wysiwyg-color-aqua {color: aqua;}
 span.wysiwyg-color-orange {color: orange;}
 
+#undo-glyphicon {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+

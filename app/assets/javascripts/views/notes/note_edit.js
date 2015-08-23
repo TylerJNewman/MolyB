@@ -1,28 +1,38 @@
 Molyb.Views.NoteEdit = Backbone.View.extend({
   template: JST["notes/edit"],
 
-
+  initialize: function (options) {
+    this.deletedNotes = options.deletedNotes;
+  },
 
 
   events: {
     "blur div.text-area": "save",
     "change .note-title": "save",
-    "click .delete-button": "deleteNote",
+    "click .delete-button": "undoDeleteNote",
+    "click .undo-button": "deleteNote",
     "click ul.dropdown-menu.color-picker > li > a": "changeColor"
   },
 
   changeColor: function (e) {
-    debugger;
     var color = e.currentTarget.className;
     $('.text-area.note-editor').children().children().unwrap();
     $('.text-area.note-editor').wrapInner( "<span class='wysiwyg-color-" + color +"'></div>");
   },
 
+  undoDeleteNote: function () {
+    debugger;
+  },
+
+
   deleteNote: function (e) {
-    var model = this.collection.getOrFetch(window.id);
-    model.destroy({
+    this.model = this.collection.getOrFetch(window.id);
+    this.deletedModel = this.model.clone();
+    this.deletedNotes.add(this.deletedModel);
+    this.model.destroy({
 
       success: function (model) {
+        debugger;
         var previous_model_id = "";
         if (_.isEmpty(this.collection.models)) {
           // $('.delete-button').prop('disabled', true);
@@ -36,7 +46,6 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
         Backbone.history.navigate("notes/" + previous_model_id, {trigger: true});
       }.bind(this)
     });
-
   },
 
   save: function () {
@@ -81,8 +90,10 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     this.$el.html(this.template({note: this.model}));
     this.editor();
 
-    this.$('.wysihtml5-toolbar').append('<li><a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a></li>');
     this.$('.wysihtml5-toolbar').append('<li><div class="dropdown"> <button class="btn btn-sm btn-primary dropdown-toggle color-picker" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-triangle-bottom"></button> <ul class="dropdown-menu color-picker"> <li><a href="#" class="silver"><span style="color:#C8C8C8">Silver</span></a></li> <li><a href="#" class="blue"><span style="color:rgb(85,181,219)">Blue</span></a></li> <li><a href="#" class="green"><span style="color:rgb(159,202,86)">Green</span></a></li> <li><a href="#" class="yellow"><span style="color:rgb(230,205,105)">Yellow</span></a></li> <li><a href="#" class="red"><span style="color:rgb(205,63,69)">Red</span></a></li> <li><a href="#" class="purple"><span style="color:rgb(160,116,196)">Purple</span></a></li> </ul> </div></li>');
+    this.$('.wysihtml5-toolbar').append('<li><a class="btn btn-sm btn-default delete-button" data-wysihtml5-command="deleteNote" title="Delete note" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-trash"></span></a></li>');
+    this.$('.wysihtml5-toolbar').append('<li><a class="btn btn-sm btn-default undo-button" data-wysihtml5-command="undoDeleteNote" title=" Undo delete" tabindex="-1" href="javascript:;" unselectable="on"><span class="glyphicon glyphicon-repeat" id="undo-glyphicon"></span></a></li>');
+
     $('.text-area.note-editor').children().children().unwrap();
     $('.text-area.note-editor').wrapInner( "<span class='wysiwyg-color-'></div>");
     return this;
