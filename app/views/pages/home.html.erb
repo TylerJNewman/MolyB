@@ -2,31 +2,16 @@
 
 <container style="margin-top:20px">
 <div class="row">
- <!--  <section class="left-panel">
-  </section> -->
-
-<!--   <section class="mid-panel col-3">
-  </section>
-
-  <section class="right-panel col-9">
-  </section> -->
 
   <% unless user_signed_in? %>
     <%= render partial: "demo"%>
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-
-    <!-- stats - count particles -->
-    <div class="count-particles">
-      <span class="js-count-particles"></span>
-    </div>
-
-    <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
   <% end %>
 
   <% if user_signed_in? %>
-    <section class="mid-panel col-sm-3"></section>
-    <section class="right-panel col-sm-9"></section>
+    <div class="container" style="margin-top:20px">
+      <section class="mid-panel col-sm-3"></section>
+      <section class="right-panel col-sm-9"></section>
+    </div>
   <% end %>
 
 

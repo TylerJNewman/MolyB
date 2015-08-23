@@ -9,6 +9,7 @@ Molyb.Views.NavBar = Backbone.View.extend({
     "click .nav-right-item": "showDropdown",
     "click .create-new-note": "createNote",
     "input .instant-search": "queryTextInput",
+    "keypress .instant-search": "preventEnterSubmit"
   },
 
   createNote: function () {
@@ -22,6 +23,12 @@ Molyb.Views.NavBar = Backbone.View.extend({
         Backbone.history.navigate("notes/" + note.id, {trigger: true});
       }
     });
+  },
+
+  preventEnterSubmit: function (event) {
+    if(event.keyCode == 13){
+          event.preventDefault();
+       }
   },
 
   queryTextInput: function(event) {
