@@ -9,8 +9,8 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
   events: {
     "blur div.text-area": "save",
     "change .note-title": "save",
-    "click .delete-button": "undoDeleteNote",
-    "click .undo-button": "deleteNote",
+    "click .delete-button": "deleteNote",
+    "click .undo-button": "undoDelete",
     "click ul.dropdown-menu.color-picker > li > a": "changeColor"
   },
 
@@ -20,8 +20,25 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     $('.text-area.note-editor').wrapInner( "<span class='wysiwyg-color-" + color +"'></div>");
   },
 
-  undoDeleteNote: function () {
-    debugger;
+  undoDelete: function () {
+    if (_.isEmpty(this.deletedNotes.models)) { return; }
+    var lastDelete = this.deletedNotes.pop();
+    attrs = lastDelete.attributes;
+    var title = attrs.title;
+    var body = attrs.body;
+    var notebook_id = attrs.notebook_id;
+    var created_at = attrs.created_at;
+    var note = this.collection.create({
+      title: title,
+      body: body,
+      notebook_id: notebook_id,
+      created_at: created_at,
+    }, {
+      success: function(note) {
+
+        Backbone.history.navigate("notes/" + note.id, {trigger: true});
+      }
+    });
   },
 
 
@@ -32,7 +49,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     this.model.destroy({
 
       success: function (model) {
-        debugger;
+
         var previous_model_id = "";
         if (_.isEmpty(this.collection.models)) {
           // $('.delete-button').prop('disabled', true);
