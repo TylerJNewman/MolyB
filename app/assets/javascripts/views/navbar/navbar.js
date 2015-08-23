@@ -15,7 +15,7 @@ Molyb.Views.NavBar = Backbone.View.extend({
   createNote: function () {
     var note = this.collection.create({
       title: "Untitled",
-      body: " ",
+      body: '<span class="wysiwyg-color-silver"><br></span>',
       notebook_id: "1"
     }, {
       success: function(note) {

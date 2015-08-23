@@ -42,6 +42,13 @@ Molyb.Routers.Router = Backbone.Router.extend({
 
     $("div.text-area").html(this.currentNote.get('body'));
     this.$titleEl.val(this.currentNote.get('title'));
+
+    var spanClass = $("div.text-area").children().attr('class');
+    if($('.glyphicon-triangle-bottom').parent().prop("tagName") === "SPAN") {
+      $('.glyphicon-triangle-bottom').unwrap();
+    };
+
+    $('.glyphicon-triangle-bottom').wrap("<span class='" + spanClass +"'></div>");
   },
 
   // editNote: function (id) {
