@@ -5,21 +5,22 @@ window.Molyb = {
   Routers: {},
   initialize: function() {
     var notes = new Molyb.Collections.Notes();
-    notes.fetch({ success: function () {
-      var previous_model_id = "";
-      if (_.isEmpty(notes.models)) {
-        // $('.delete-button').prop('disabled', true);
-      }
-      else {
-        // $('.delete-button').prop('disabled', false);
-        var previous_model = notes.first();
-        previous_model_id = previous_model.id;
-      }
-      Backbone.history.navigate("", {trigger: true});
-      Backbone.history.navigate("notes/" + previous_model_id, {trigger: true});
+    if (window.username) {
+      notes.fetch({ success: function () {
+        var previous_model_id = "";
+        if (_.isEmpty(notes.models)) {
+          // $('.delete-button').prop('disabled', true);
+        }
+        else {
+          // $('.delete-button').prop('disabled', false);
+          var previous_model = notes.first();
+          previous_model_id = previous_model.id;
+        }
+        Backbone.history.navigate("", {trigger: true});
+        Backbone.history.navigate("notes/" + previous_model_id, {trigger: true});
 
-    }});
-
+      }});
+    }
     var $navbar = $('#navbar');
     var navBarView = new Molyb.Views.NavBar({collection: notes});
     $navbar.prepend(navBarView.render().$el);

@@ -8,17 +8,14 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'newrelic_rpm'
 gem 'rails_12factor'
 gem 'backbone-on-rails', '~> 1.1.0.0'
 gem 'underscore-rails'
 gem 'bootstrap-sass'
 gem 'jasny-bootstrap-rails', '~> 3.1.3'
 gem 'uuidtools'
-gem 'letter_opener', '~> 1.4.1'
 gem 'bcrypt'
 gem 'bootstrap-wysihtml5-rails'
-gem "pg_search"
 gem 'bootswatch-rails'
 
 

@@ -9,23 +9,13 @@ class Api::NotesController < ApplicationController
     end
   end
 
-  # def index
-  #   @notes = Note.search(params[:search])
-  #   # @notes = current_user.notes.search(params)
-  #   render json: @notes
-
-
-  # end
 
   def index
-    if params[:search] && params[:search] != ""
-
-      @notes = current_user.notes.search_by_title_and_body(params[:search])
-      render json: @notes
-    else
+    if current_user
       @notes = current_user.notes
       render json: @notes
-
+    else
+      render json: {}
     end
   end
 

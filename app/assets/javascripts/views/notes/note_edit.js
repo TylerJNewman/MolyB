@@ -20,14 +20,10 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
     $('.text-area.note-editor').children().children().unwrap();
 
     $('.text-area.note-editor').wrapInner( "<span class='wysiwyg-color-" + color +"'></div>");
-    if($('.glyphicon-triangle-bottom').parent().prop("tagName") === "SPAN") {
-      $('.glyphicon-triangle-bottom').unwrap();
-    };
-
-    $('.glyphicon-triangle-bottom').wrap("<span class='wysiwyg-color-" + color +"'></div>");
   },
 
-  undoDelete: function () {
+  undoDelete: function (e) {
+    e.preventDefault();
     if (_.isEmpty(this.deletedNotes.models)) { return; }
     var lastDelete = this.deletedNotes.pop();
     attrs = lastDelete.attributes;
@@ -50,6 +46,7 @@ Molyb.Views.NoteEdit = Backbone.View.extend({
 
 
   deleteNote: function (e) {
+    if (_.isEmpty(this.collection.models)) { return; }
     this.model = this.collection.getOrFetch(window.id);
     this.deletedModel = this.model.clone();
     this.deletedNotes.add(this.deletedModel);
