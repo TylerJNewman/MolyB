@@ -9,12 +9,12 @@
 Molyb is a clone of Evernote built on Rails and Backbone. Users can:
 
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
-- [ ] Write notes, checklists, and research
-- [ ] Organize docs and photos
-- [ ] Search for docs by tag, title or content
-- [ ] Discuss and share work with others
+- [x] Create accounts
+- [x] Create sessions (log in)
+- [x] Write notes, checklists
+- [x] Create color picker
+- [x] Search for docs by title or content
+- [x] Create trash and undo button
 
 ## Design Docs
 * [View Wireframe][view]
@@ -23,13 +23,13 @@ Molyb is a clone of Evernote built on Rails and Backbone. Users can:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Blog Creation (~1 day)
+### Phase 1: User Authentication (~1 day)
 Implement user authentication using custom gem.  Render basic notes system
 when a user logs in.  Navbar.  Search Bar.  New Note button.
 Account settings/Logout menu.
 Add some basic CSS.  Push to Heroku.
 
-### Phase 2: Viewing Blogs and Posts (~2 days)
+### Phase 2: Viewing (~2 days)
 Implement API, routes, and composite views!  Build sidebar pane.  Shortcut feature.
 Notebooks. Tags.  Build Notes.  Add css highlighting on hover.
 
