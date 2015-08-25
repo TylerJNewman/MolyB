@@ -6,5 +6,5 @@ Note.create!([
   {title: "Sun Tzu", body: "All men can see these tactics whereby I conquer, but what none can see is the strategy out of which victory is evolved.<br><small></small><br>", owner_id: 1, notebook_id: 1},
 ])
 User.create!([
-  {name: "moly", password: "molyb123", email: "molyb@molyb.com"}
+  {name: "den", password: "password", email: "den@gmail.com"}
 ])
