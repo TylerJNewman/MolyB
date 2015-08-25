@@ -45,6 +45,11 @@ input.form-control.instant-search {
 }
 
 /* line 42, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+button.btn.btn-primary.create-new-note {
+  background-color: #383C41;
+}
+
+/* line 46, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn {
   border: 0 none;
   font-weight: 700;
@@ -52,114 +57,114 @@ input.form-control.instant-search {
   text-transform: uppercase;
 }
 
-/* line 50, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 54, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn:focus, .btn:active:focus, .btn.active:focus {
   outline: 0 none;
 }
 
-/* line 54, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 58, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn-primary {
-  background: #383C41;
+  background: #2D2F31;
   color: #ffffff;
 }
 
-/* line 59, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 63, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   background: black;
 }
 
-/* line 63, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 67, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn-primary:active, .btn-primary.active {
   background: #383C41;
   box-shadow: none;
 }
 
-/* line 73, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 77, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-black {
   color: black;
 }
 
-/* line 74, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 78, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-silver {
   color: #C8C8C8;
 }
 
-/* line 75, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 79, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-gray {
   color: gray;
 }
 
-/* line 76, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 80, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-white {
   color: white;
 }
 
-/* line 77, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 81, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-maroon {
   color: maroon;
 }
 
-/* line 78, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 82, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-red {
   color: #cd3f45;
 }
 
-/* line 79, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 83, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-purple {
   color: #a074c4;
 }
 
-/* line 80, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 84, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-fuchsia {
   color: fuchsia;
 }
 
-/* line 81, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 85, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-green {
   color: #9fca56;
 }
 
-/* line 82, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 86, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-lime {
   color: lime;
 }
 
-/* line 83, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 87, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-olive {
   color: olive;
 }
 
-/* line 84, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 88, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-yellow {
   color: #e6cd69;
 }
 
-/* line 85, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 89, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-navy {
   color: navy;
 }
 
-/* line 86, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 90, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-blue {
   color: #55b5db;
 }
 
-/* line 87, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 91, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-teal {
   color: teal;
 }
 
-/* line 88, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 92, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-aqua {
   color: aqua;
 }
 
-/* line 89, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 93, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-orange {
   color: orange;
 }
 
-/* line 91, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 95, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 #undo-glyphicon {
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
@@ -169,7 +174,7 @@ span.wysiwyg-color-orange {
   -ms-filter: "FlipH";
 }
 
-/* line 100, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 104, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 section.right-panel.col-sm-9 {
   float: right;
 }
@@ -9630,6 +9635,11 @@ input.form-control.instant-search {
 }
 
 /* line 42, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+button.btn.btn-primary.create-new-note {
+  background-color: #383C41;
+}
+
+/* line 46, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn {
   border: 0 none;
   font-weight: 700;
@@ -9637,114 +9647,114 @@ input.form-control.instant-search {
   text-transform: uppercase;
 }
 
-/* line 50, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 54, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn:focus, .btn:active:focus, .btn.active:focus {
   outline: 0 none;
 }
 
-/* line 54, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 58, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn-primary {
-  background: #383C41;
+  background: #2D2F31;
   color: #ffffff;
 }
 
-/* line 59, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 63, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   background: black;
 }
 
-/* line 63, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 67, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 .btn-primary:active, .btn-primary.active {
   background: #383C41;
   box-shadow: none;
 }
 
-/* line 73, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 77, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-black {
   color: black;
 }
 
-/* line 74, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 78, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-silver {
   color: #C8C8C8;
 }
 
-/* line 75, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 79, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-gray {
   color: gray;
 }
 
-/* line 76, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 80, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-white {
   color: white;
 }
 
-/* line 77, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 81, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-maroon {
   color: maroon;
 }
 
-/* line 78, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 82, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-red {
   color: #cd3f45;
 }
 
-/* line 79, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 83, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-purple {
   color: #a074c4;
 }
 
-/* line 80, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 84, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-fuchsia {
   color: fuchsia;
 }
 
-/* line 81, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 85, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-green {
   color: #9fca56;
 }
 
-/* line 82, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 86, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-lime {
   color: lime;
 }
 
-/* line 83, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 87, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-olive {
   color: olive;
 }
 
-/* line 84, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 88, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-yellow {
   color: #e6cd69;
 }
 
-/* line 85, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 89, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-navy {
   color: navy;
 }
 
-/* line 86, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 90, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-blue {
   color: #55b5db;
 }
 
-/* line 87, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 91, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-teal {
   color: teal;
 }
 
-/* line 88, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 92, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-aqua {
   color: aqua;
 }
 
-/* line 89, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 93, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 span.wysiwyg-color-orange {
   color: orange;
 }
 
-/* line 91, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 95, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 #undo-glyphicon {
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
@@ -9754,7 +9764,7 @@ span.wysiwyg-color-orange {
   -ms-filter: "FlipH";
 }
 
-/* line 100, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
+/* line 104, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/_bootstrap-custom.scss */
 section.right-panel.col-sm-9 {
   float: right;
 }
@@ -10604,27 +10614,27 @@ section.right-panel.col-sm-9 {
 }
 
 /*# sourceMappingURL=jasny-bootstrap.css.map */
-/* line 45, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 43, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 html, body {
   height: 100%;
 }
 
-/* line 50, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 48, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 body {
   padding: 0px 0 0 0;
 }
 
-/* line 55, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 53, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .custom-frame {
   top: 91px;
 }
 
-/* line 59, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 57, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 #notes-index > li {
   margin-bottom: 3px;
 }
 
-/* line 63, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 61, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 html {
   background: url(https://images.unsplash.com/photo-1433785124354-92116416b870?q=80&fm=jpg&s=38f06298f26c11c59024eabf3b0be3bb) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -10633,82 +10643,82 @@ html {
   background-size: cover;
 }
 
-/* line 70, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 68, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 body {
   opacity: .96;
   background: transparent;
 }
 
-/* line 75, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 73, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 a.list-group-item:hover, a.list-group-item:focus, button.list-group-item:hover, button.list-group-item:focus {
   background-color: #32383e;
   opacity: 1 !important;
 }
 
-/* line 80, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 78, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .center {
   text-align: center;
 }
 
-/* line 84, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 82, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .navbar-brand {
   font-weight: bold;
 }
 
-/* line 90, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 88, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 #navbar {
   height: 50px;
 }
 
-/* line 94, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 92, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .navbar {
   background: #272b30;
   height: 100%;
 }
 
-/* line 99, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 97, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .container .navbar .container {
   width: auto;
 }
 
-/* line 103, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 101, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .navbar-toggle {
   float: left;
   margin-left: 15px;
 }
 
 @media (min-width: 0) {
-  /* line 109, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+  /* line 107, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
   .navbar-toggle {
     display: block;
     /* force showing the toggle */
   }
 }
 @media (min-width: 0px) {
-  /* line 115, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+  /* line 113, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
   body {
     padding: 0;
   }
 
-  /* line 119, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+  /* line 117, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
   .navbar {
     right: auto;
     border: none;
   }
 }
-/* line 127, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 125, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 ul#notes-index {
   list-style-type: none;
 }
 
-/* line 134, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 132, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .container.text-editor {
   display: block;
   /* border, padding, and other styles go here,
   don't set the height, and don't use floats or positioning */
 }
 
-/* line 143, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 141, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .container.text-editor textarea {
   border: 0 none;
   margin: 0;
@@ -10717,18 +10727,18 @@ ul#notes-index {
   width: 100%;
 }
 
-/* line 152, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 150, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .container.text-editor iframe {
   width: 100%;
 }
 
-/* line 157, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 155, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .panel-body ul.wysihtml5-toolbar {
   margin: 0px 20px;
   display: block;
 }
 
-/* line 162, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 160, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .edit-note.list-group-item {
   height: 160px;
   padding-top: 1px;
@@ -10739,7 +10749,7 @@ ul#notes-index {
   overflow: hidden;
 }
 
-/* line 172, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 170, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -10748,18 +10758,18 @@ ul#notes-index {
   /* the bottom margin is the negative value of the footer's height */
 }
 
-/* line 178, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 176, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .footer, .push {
   height: 155px;
   /* .push must be the same height as .footer */
 }
 
-/* line 182, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 180, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 .text-area.note-editor {
   overflow-y: auto;
 }
 
-/* line 189, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 187, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 demo-user {
   background: #69ad31;
   padding: 8px 16px;
@@ -10773,7 +10783,7 @@ demo-user {
   text-align: center;
 }
 
-/* line 202, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
+/* line 200, /Users/Tyler/Desktop/molyb/app/assets/stylesheets/application.scss */
 section.mid-panel.col-sm-3 {
   height: 600px;
   overflow-y: auto;

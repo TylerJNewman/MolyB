@@ -6,15 +6,18 @@
       <%= form_for(demo_user, :url => session_path(demo_user)) do |f| %>
 
       <fieldset>
-        <legend>Demo</legend>
+        <legend></legend>
         <%= f.hidden_field :email, :value => 'den@gmail.com' %>
         <%= f.hidden_field :password, :value => 'password' %>
 
+        <%= link_to "Sign in", new_session_path(@user), class: 'btn btn-primary btn-large btn-block' %><br />
+        <%= link_to "Sign up", new_user_path(@user), class: 'btn btn-primary btn-large btn-block' %><br />
+
+
         <div class="form-group">
-          <%= f.submit 'Log in', class: 'btn btn-primary btn-large btn-block' %>
+          <%= f.submit 'Log in as Guest', class: 'btn btn-primary btn-large btn-block' %>
         </div>
         <% end %>
-
       </fieldset>
     </div>
   </div>

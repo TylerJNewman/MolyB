@@ -39,6 +39,10 @@ input.form-control.instant-search {
   border: none;
 }
 
+button.btn.btn-primary.create-new-note {
+  background-color: #383C41;
+}
+
 .btn {
     // padding: 14px 24px;
     border: 0 none;
@@ -52,9 +56,9 @@ input.form-control.instant-search {
 }
 
 .btn-primary {
-    background: #383C41;
+    background: #2D2F31;
     color: #ffffff;
-}
+  }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     background: black;
