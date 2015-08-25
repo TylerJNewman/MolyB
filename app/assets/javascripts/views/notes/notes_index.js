@@ -41,22 +41,11 @@ Molyb.Views.NotesIndex = Backbone.CompositeView.extend({
     return this;
   },
 
-  renderList: function () {
-    // this.filteredCollection = this.collection.search(navbar.searchText);
-    // this.filteredCollection.each(this.addNote.bind(this));
-  },
 
   reorderViews: function () {
-
     this.attachSortedSubviews('#notes-index');
-    // var views = this.subviews("#notes-index");
-    // this.subviews()["#notes-index"] = views.sortBy(function (view) {
-    //   return this.collection.comparator(view.model);
-    // }.bind(this));
-    // this.$("#notes-index").empty();
-    // this.attachSubviews();
-    // var models = this.collection.remove(this.collection.models);
-    // this.collection.add(models);
+    $(".selected").removeClass("selected");
+    $('a[href*='+window.id+']').addClass("selected");
   },
 
   attachSortedSubviews: function (selector) {

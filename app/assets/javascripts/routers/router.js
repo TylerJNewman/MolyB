@@ -49,6 +49,12 @@ Molyb.Routers.Router = Backbone.Router.extend({
     };
 
     $('.glyphicon-triangle-bottom').wrap("<span class='" + spanClass +"'></div>");
+
+    $(".selected").removeClass("selected");
+
+
+    $('a[href*='+window.id+']').addClass("selected");
+
   },
 
   // editNote: function (id) {

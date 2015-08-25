@@ -21,9 +21,18 @@ input.form-control.instant-search {
   margin-right: auto;
 }
 
+
 .form-group input {
   background-color: #2D2F31;
   color: white;
+}
+
+#notes-index .selected {
+  opacity: 1;
+}
+
+#notes-index a {
+  opacity: 0.75;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -86,5 +95,9 @@ span.wysiwyg-color-orange {color: orange;}
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+}
+
+section.right-panel.col-sm-9 {
+  float: right;
 }
 
