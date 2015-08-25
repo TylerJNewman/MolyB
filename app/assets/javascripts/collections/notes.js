@@ -9,16 +9,17 @@ Molyb.Collections.Notes = Backbone.Collection.extend({
 
   search : function(letters){
       if(letters === undefined || letters == "") return this.models.slice();
-      debugger;
 
       var titleModels = this.filter(function(data) {
         var pattern = new RegExp(letters,"gi");
-        return pattern.test(data.escape("title"));
+        return pattern.test(data.get("title"));
       });
 
       var bodyModels = this.filter(function(data) {
         var pattern = new RegExp(letters,"gi");
-        return pattern.test(data.escape("body"));
+        var str = data.get("body").replace(/<[^>]*>/g,'');
+        return pattern.test(str);
+
       });
 
 
