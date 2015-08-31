@@ -1,12 +1,12 @@
-# Molyb
+# NoteDen
 
 
-[Heroku link][heroku]
+[live link][noteden]
 
-[heroku]: http://molyb.herokuapp.com
+[noteden]: http://NoteDen.xyz
 
 ## Minimum Viable Product
-Molyb is a clone of Evernote built on Rails and Backbone. Users can:
+NoteDen is inspire by Evernote built on Rails and Backbone. Users can:
 
 
 - [x] Create accounts
@@ -16,10 +16,6 @@ Molyb is a clone of Evernote built on Rails and Backbone. Users can:
 - [x] Search for docs by title or content
 - [x] Create trash and undo button
 
-## Design Docs
-* [View Wireframe][view]
-
-[view]: ./docs/wireframe
 
 ## Implementation Timeline
 
